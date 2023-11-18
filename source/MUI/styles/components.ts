@@ -18,6 +18,11 @@ export const components = {
       size: 'small'
     }
   },
+  MuiCheckbox: {
+    defaultProps: {
+      padding: '0 !important'
+    }
+  },
   MuiButton: {
     defaultProps: {
       disableElevation: false

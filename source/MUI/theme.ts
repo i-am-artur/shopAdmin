@@ -1,8 +1,8 @@
-import { createTheme } from "@mui/material/styles";
-import { palette } from "@/source/MUI/styles/pallete";
-import { components } from "@/source/MUI/styles/components";
-import { breakpoints } from "@/source/MUI/styles/breakpoints";
-import { inter } from "@/source/styles/font";
+import { createTheme } from '@mui/material/styles';
+import { palette } from '@/source/MUI/styles/pallete';
+import { components } from '@/source/MUI/styles/components';
+import { breakpoints } from '@/source/MUI/styles/breakpoints';
+import { defaultFont } from '@/source/styles/font';
 
 // const roboto = Roboto({
 //   weight: ['300', '400', '500', '700'],
@@ -15,12 +15,12 @@ const theme = createTheme({
   //   mode: 'light'
   // },
   typography: {
-    fontFamily: inter.style.fontFamily,
+    fontFamily: defaultFont.style.fontFamily
   },
   spacing: 1,
   palette,
   components,
-  breakpoints,
+  breakpoints
 });
 
 export default theme;
