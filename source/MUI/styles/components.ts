@@ -25,7 +25,7 @@ export const components = {
   },
   MuiButton: {
     defaultProps: {
-      disableElevation: false
+      disableElevation: true
     }
   },
   MuiLink: {

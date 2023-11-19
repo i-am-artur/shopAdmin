@@ -15,17 +15,16 @@ import { box, unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowTurnDown, faFilter, faPlusCircle, faReply } from '@fortawesome/free-solid-svg-icons';
 import Cats from '@/app/[lang]/(authorized)/cats/(index)/components/Cats';
+import CancelBack from '@/source/components/Buttons/Back/CancelBack';
 
 export default function EditCats() {
   return (
     <Stack rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>
         <PageHeading>Category</PageHeading>
-        <Box sx={{ flexDirection: 'row', columnGap: unit.gap.h }}>
+        <Box sx={{ display: 'flex', columnGap: unit.gap.h }}>
           <Button variant='contained'>Save</Button>
-          <IconButton color='error' variant='contained'>
-            <FontAwesomeIcon icon={faReply} />
-          </IconButton>
+          <CancelBack />
         </Box>
       </Stack>
 
@@ -35,23 +34,6 @@ export default function EditCats() {
           Filter
         </Button>
       </Stack>
-
-      <Stack direction='row' alignItems='center'>
-        <Box sx={{ transform: 'rotate(-90deg)', padding: 14 }}>
-          <FontAwesomeIcon icon={faArrowTurnDown} />
-        </Box>
-        <FormControl fullWidth>
-          <InputLabel id='demo-simple-select-label' size='small'>
-            Action
-          </InputLabel>
-          <Select labelId='demo-simple-select-label' id='demo-simple-select' value='' label='Action'>
-            <MenuItem value={10}>Delete</MenuItem>
-            <MenuItem value={20}>Set parent category</MenuItem>
-          </Select>
-        </FormControl>
-      </Stack>
-
-      <Cats />
     </Stack>
   );
 }

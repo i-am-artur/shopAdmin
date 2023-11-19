@@ -5,22 +5,20 @@ import { box, unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowTurnDown, faFilter, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import Cats from '@/app/[lang]/(authorized)/cats/(index)/components/Cats';
+import Add from '@/source/components/Buttons/Add/Add';
+import Filter from '@/source/components/Buttons/Filter/Filter';
 
 export default function Categories() {
   return (
     <Stack rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>
         <PageHeading>Categories</PageHeading>
-        <Button variant='contained' startIcon={<FontAwesomeIcon icon={faPlusCircle} />}>
-          Add
-        </Button>
+        <Add />
       </Stack>
 
       <Stack direction='row' justifyContent='space-between' columnGap={unit.gap.h}>
         <TextField placeholder='Search' label='Search' />
-        <Button variant='contained' color='secondary' startIcon={<FontAwesomeIcon icon={faFilter} />}>
-          Filter
-        </Button>
+        <Filter />
       </Stack>
 
       <Stack direction='row' alignItems='center'>
