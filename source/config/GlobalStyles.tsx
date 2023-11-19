@@ -1,6 +1,7 @@
 'use client';
 
 import { Global } from '@emotion/react';
+import { primary } from '@/source/styles/colors';
 
 export function GlobalStyles() {
   return (
