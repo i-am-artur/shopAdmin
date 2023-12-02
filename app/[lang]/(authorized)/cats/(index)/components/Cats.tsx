@@ -5,6 +5,7 @@ import { faGrip, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Table, TBody, TD, TH, THead, TR } from '@/source/components/table/Table';
 import Pagination from '@/source/components/Pagination/Pagination';
 import { Fragment } from 'react';
+import { page } from '@/source/routes/routes';
 
 export default function Cats() {
   return (
@@ -26,25 +27,7 @@ export default function Cats() {
               <Checkbox aria-label='checkbox category' />
             </TD>
             <TD>
-              <Link href='/'>name</Link>
-            </TD>
-            <TD $sx={{ textAlign: 'center' }}>
-              <IconButton>
-                <FontAwesomeIcon icon={faGrip} />
-              </IconButton>
-            </TD>
-            <TD $sx={{ textAlign: 'center' }}>
-              <IconButton>
-                <FontAwesomeIcon icon={faTrash} />
-              </IconButton>
-            </TD>
-          </TR>
-          <TR>
-            <TD>
-              <Checkbox aria-label='checkbox category' />
-            </TD>
-            <TD>
-              <Link href='/'>name</Link>
+              <Link href={page.categories.edit.path}>name</Link>
             </TD>
             <TD $sx={{ textAlign: 'center' }}>
               <IconButton>

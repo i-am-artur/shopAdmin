@@ -1,11 +1,19 @@
-export const imageProps = {
-  width: 300,
-  height: 300,
-  ratio: '300/300'
+const imageProps = {
+  maxWidth: 300,
+  maxHeight: 300
+};
+
+export const image = {
+  ...imageProps,
+  ratio: imageProps.maxWidth / imageProps.maxHeight
 };
 
 export const catProps = {
-  width: 150,
-  height: 150,
-  ratio: 150 / 150
+  maxWidth: 150,
+  maxHeight: 150
+};
+
+export const catsImage = {
+  ...catProps,
+  ratio: catProps.maxWidth / catProps.maxHeight
 };
