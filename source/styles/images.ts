@@ -13,7 +13,7 @@ export const catProps = {
   maxHeight: 150
 };
 
-export const catsImage = {
+export const catImage = {
   ...catProps,
   ratio: catProps.maxWidth / catProps.maxHeight
 };

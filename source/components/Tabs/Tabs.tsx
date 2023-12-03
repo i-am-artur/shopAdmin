@@ -1,15 +1,15 @@
-import { Tabs as MUITabs, Tab as MUITab } from '@mui/material';
+import { Tab as MUITab, Tabs as MUITabs } from '@mui/material';
 import { secondary } from '@/source/styles/colors';
 import { radius } from '@/source/styles/borders';
 import styled from 'styled-components';
 
 export const Tabs = styled(MUITabs)<{
-  fullWidth?: boolean;
-  upperCase?: boolean;
+  $fullWidth?: boolean;
+  $upperCase?: boolean;
 }>`
   padding: 4px;
   min-height: initial !important;
-  width: ${({ fullWidth }) => (fullWidth ? '100%' : 'fit-content')};
+  width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'fit-content')};
   background-color: ${secondary.bg};
   border-radius: ${radius.general}px;
 
@@ -23,18 +23,17 @@ export const Tabs = styled(MUITabs)<{
   }
 
   & .MuiTab-root {
-    flex: ${({ fullWidth }) => (fullWidth ? '1 1' : 'initial')};
-    text-transform: ${({ upperCase }) => (upperCase ? 'uppercase' : 'initial')};
+    flex: ${({ $fullWidth }) => ($fullWidth ? '1 1' : 'initial')};
+    text-transform: ${({ $upperCase }) => ($upperCase ? 'uppercase' : 'initial')};
   }
 `;
 
 export const Tab = styled(MUITab)`
   padding: 8px 12px !important;
-  margin: 4px;
   min-height: initial !important;
   min-width: initial !important;
   font-size: 16px !important;
   color: ${secondary.text};
-  border-radius: ${radius.general}px;
+  border-radius: ${radius.general}px !important;
   text-transform: initial;
 `;

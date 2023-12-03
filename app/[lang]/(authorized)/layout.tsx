@@ -3,7 +3,7 @@ import { IconButton, Stack } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
 import { body, box, unit } from '@/source/styles/layouts';
-import { ReactNode, Fragment } from 'react';
+import { Fragment, ReactNode } from 'react';
 
 export default function AuthorizedLayout({ children }: { children: ReactNode }) {
   return (
@@ -16,6 +16,7 @@ export default function AuthorizedLayout({ children }: { children: ReactNode }) 
         color='white'
         mx={-1 * body.padding.h}
         mt={-1 * body.padding.h}
+        mb={box.gap.v}
         sx={{ backgroundColor: 'black' }}
       >
         <Stack direction='row' columnGap={unit.gap.h} alignItems='center'>

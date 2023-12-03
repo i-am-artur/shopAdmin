@@ -1,13 +1,16 @@
 'use client';
 
 import { Global } from '@emotion/react';
-import { primary } from '@/source/styles/colors';
 
 export function GlobalStyles() {
   return (
     <Global
       styles={
         {
+          '*': {
+            margin: 0,
+            padding: 0
+          },
           html: {
             fontSize: '16px',
             lineHeight: 'normal'
@@ -38,6 +41,9 @@ export function GlobalStyles() {
           },
           '.MuiCheckbox-root': {
             padding: 0
+          },
+          '.MuiFormControlLabel-root': {
+            margin: 0
           }
         } as any
       }
