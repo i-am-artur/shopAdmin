@@ -39,9 +39,6 @@ export function GlobalStyles() {
           button: {
             cursor: 'pointer'
           },
-          '.MuiCheckbox-root': {
-            padding: 0
-          },
           '.MuiFormControlLabel-root': {
             margin: 0
           }

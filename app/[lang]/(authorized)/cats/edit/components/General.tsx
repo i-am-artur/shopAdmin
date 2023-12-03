@@ -1,12 +1,13 @@
 'use client';
-import { Autocomplete, Checkbox, FormControlLabel, Stack, TextField } from '@mui/material';
+import { Autocomplete, FormControlLabel, Stack, TextField } from '@mui/material';
 import { box } from '@/source/styles/layouts';
+import Checkbox from '@/source/components/Checkbox/Checkbox';
 
 export default function General() {
   return (
     <Stack component='section' rowGap={box.gap.v} arial-label='General'>
       <FormControlLabel
-        control={<Checkbox aria-label='Active for this language' />}
+        control={<Checkbox variant='unit' aria-label='Active for this language' />}
         label='Active for this language'
       />
 
