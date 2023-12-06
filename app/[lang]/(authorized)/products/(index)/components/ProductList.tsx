@@ -3,7 +3,7 @@ import { Link } from '@mui/material';
 import { Table, TBody, TD, TH, THead, TR } from '@/source/components/table/Table';
 import Pagination from '@/source/components/Pagination/Pagination';
 import { Fragment } from 'react';
-import { page } from '@/source/routes/routes';
+import { urls } from '@/source/routes/routes';
 import { secondary } from '@/source/styles/colors';
 import Checkbox from '@/source/components/Checkbox/Checkbox';
 
@@ -26,7 +26,7 @@ export default function ProductList() {
               <Checkbox aria-label='select product' />
             </TD>
             <TD>
-              <Link href={page.products.edit.path}>name</Link>
+              <Link href={urls.products.edit.path}>name</Link>
             </TD>
             <TD>34</TD>
           </TR>
@@ -35,7 +35,7 @@ export default function ProductList() {
               <Checkbox aria-label='select product' />
             </TD>
             <TD>
-              <Link href={page.products.edit.path} color={secondary.text}>
+              <Link href={urls.products.edit.path} color={secondary.text}>
                 name
               </Link>
             </TD>

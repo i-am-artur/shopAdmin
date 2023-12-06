@@ -39,6 +39,12 @@ export function GlobalStyles() {
           button: {
             cursor: 'pointer'
           },
+          fieldset: {
+            border: 'none'
+          },
+          legend: {
+            fontSize: 18
+          },
           '.MuiFormControlLabel-root': {
             margin: 0
           }

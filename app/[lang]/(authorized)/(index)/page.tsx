@@ -1,11 +1,12 @@
-import { Button } from '@mui/material';
-import { page } from '@/source/routes/routes';
 import Link from 'next/link';
+import { flattenUrls } from '@/source/routes/routes';
 
 export default function Home() {
+  flattenUrls();
+
   return (
     <main>
-      {Object.values(page.categories).map((el, i) => (
+      {flattenUrls().map((el, i) => (
         <li key={i}>
           <Link href={el.path}>{el.path}</Link>
         </li>
