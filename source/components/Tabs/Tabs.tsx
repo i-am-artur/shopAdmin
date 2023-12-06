@@ -13,6 +13,10 @@ export const Tabs = styled(MUITabs)<{
   background-color: ${secondary.bg};
   border-radius: ${radius.general}px;
 
+  & .MuiTabs-flexContainer {
+    flex-wrap: wrap;
+  }
+
   & .Mui-selected {
     color: ${secondary.text} !important;
     background-color: white;
