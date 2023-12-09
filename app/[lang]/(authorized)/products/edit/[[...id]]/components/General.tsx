@@ -14,11 +14,48 @@ export default function General() {
       <TextField label='Name (EN)' />
 
       <Autocomplete
+        multiple
         options={['cat1', '(ru) cat2']}
         renderInput={(params) => <TextField {...params} label='Category' />}
       />
 
-      <TextField label='Description (EN)' rows={6} multiline />
+      <TextField label='Short description (EN)' rows={3} multiline />
+      <TextField label='Description (EN)' rows={8} multiline />
+
+      <FormControlLabel
+        control={<Checkbox variant='unit' aria-label='Sell only from online location' />}
+        label='Sell only from online location'
+      />
+
+      <Autocomplete
+        multiple
+        options={['Nike', 'Sony']}
+        renderInput={(params) => <TextField {...params} label='Brands' />}
+      />
+
+      <Autocomplete
+        multiple
+        options={['sony 345', 'samsung s10e']}
+        renderInput={(params) => <TextField {...params} label='Related products' />}
+      />
+
+      <Autocomplete
+        multiple
+        options={['All']}
+        renderInput={(params) => <TextField {...params} label='Shipment' />}
+      />
+
+      <Autocomplete
+        multiple
+        options={['EU']}
+        renderInput={(params) => <TextField {...params} label='Zones' />}
+      />
+
+      <Autocomplete
+        multiple
+        options={['EU']}
+        renderInput={(params) => <TextField {...params} label='Taxes' />}
+      />
     </Stack>
   );
 }

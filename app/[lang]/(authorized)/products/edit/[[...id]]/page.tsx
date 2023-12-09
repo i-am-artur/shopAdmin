@@ -12,10 +12,12 @@ import { error } from '@/source/styles/colors';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import Checkbox from '@/source/components/Checkbox/Checkbox';
 import General from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/General';
+import SEO from './components/SEO';
+import Discounts from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Discounts/Discounts';
 
 export default function ProductEditPage() {
   const [language, setLanguage] = useState('en');
-  const [section, setSection] = useState('general');
+  const [section, setSection] = useState('General');
 
   return (
     <Stack component='main' rowGap={box.gap.v}>
@@ -56,18 +58,20 @@ export default function ProductEditPage() {
               General <FontAwesomeIcon icon={faExclamationCircle} color={error.main} />
             </Stack>
           }
-          value='general'
+          value='General'
         />
         <Tab label='Price/Properties' value='Price/Properties' />
         <Tab label='Quantity/Variants' value='Quantity/Variants' />
         <Tab label='Images' value='Images' />
         <Tab label='Options' value='Options' />
-        <Tab label='Discount' value='Discount' />
+        <Tab label='Discounts' value='Discounts' />
         <Tab label='Attributes' value='Attributes' />
         <Tab label='SEO' value='SEO' />
       </Tabs>
 
-      {section === 'general' && <General />}
+      {section === 'General' && <General />}
+      {section === 'Discounts' && <Discounts />}
+      {section === 'SEO' && <SEO />}
     </Stack>
   );
 }
