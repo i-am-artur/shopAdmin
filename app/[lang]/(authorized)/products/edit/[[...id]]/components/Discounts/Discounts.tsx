@@ -1,6 +1,6 @@
 'use client';
 import { Box, Button, Stack } from '@mui/material';
-import { box } from '@/source/styles/layouts';
+import { box, item } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { secondary } from '@/source/styles/colors';
@@ -15,11 +15,14 @@ export default function Discounts() {
       <Button variant='contained' color='secondary' startIcon={<FontAwesomeIcon icon={faPlusCircle} />}>
         Add discount
       </Button>
-      <ul>
+      <Stack rowGap={item.gap.v}>
         <li>
           <Discount />
         </li>
-      </ul>
+        <li>
+          <Discount />
+        </li>
+      </Stack>
     </Stack>
   );
 }

@@ -14,10 +14,11 @@ import Checkbox from '@/source/components/Checkbox/Checkbox';
 import General from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/General';
 import SEO from './components/SEO';
 import Discounts from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Discounts/Discounts';
+import Attributes from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Attributes';
 
 export default function ProductEditPage() {
   const [language, setLanguage] = useState('en');
-  const [section, setSection] = useState('General');
+  const [section, setSection] = useState('Attributes');
 
   return (
     <Stack component='main' rowGap={box.gap.v}>
@@ -61,15 +62,16 @@ export default function ProductEditPage() {
           value='General'
         />
         <Tab label='Price/Properties' value='Price/Properties' />
-        <Tab label='Quantity/Variants' value='Quantity/Variants' />
         <Tab label='Images' value='Images' />
+        <Tab label='Quantity/Variants' value='Quantity/Variants' />
+        <Tab label='Attributes' value='Attributes' />
         <Tab label='Options' value='Options' />
         <Tab label='Discounts' value='Discounts' />
-        <Tab label='Attributes' value='Attributes' />
         <Tab label='SEO' value='SEO' />
       </Tabs>
 
       {section === 'General' && <General />}
+      {section === 'Attributes' && <Attributes />}
       {section === 'Discounts' && <Discounts />}
       {section === 'SEO' && <SEO />}
     </Stack>

@@ -36,6 +36,9 @@ export function GlobalStyles() {
             padding: 0,
             listStyleType: 'none'
           },
+          li: {
+            listStyleType: 'none'
+          },
           button: {
             cursor: 'pointer'
           },

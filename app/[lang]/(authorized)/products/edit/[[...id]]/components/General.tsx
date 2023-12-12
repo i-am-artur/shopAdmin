@@ -22,6 +22,7 @@ export default function General() {
       <TextField label='Short description (EN)' rows={3} multiline />
       <TextField label='Description (EN)' rows={8} multiline />
 
+      {/*  TODO: Move to locations/quantity */}
       <FormControlLabel
         control={<Checkbox variant='unit' aria-label='Sell only from online location' />}
         label='Sell only from online location'
@@ -41,14 +42,14 @@ export default function General() {
 
       <Autocomplete
         multiple
-        options={['All']}
+        options={['Nova Pochta']}
         renderInput={(params) => <TextField {...params} label='Shipment' />}
       />
 
       <Autocomplete
         multiple
         options={['EU']}
-        renderInput={(params) => <TextField {...params} label='Zones' />}
+        renderInput={(params) => <TextField {...params} label='Forbidden to sell in zones' />}
       />
 
       <Autocomplete
