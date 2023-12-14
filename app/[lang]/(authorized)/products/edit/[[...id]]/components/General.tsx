@@ -1,7 +1,7 @@
 'use client';
 import { Autocomplete, FormControlLabel, Stack, TextField } from '@mui/material';
 import { box } from '@/source/styles/layouts';
-import Checkbox from '@/source/components/Checkbox/Checkbox';
+import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 
 export default function General() {
   return (

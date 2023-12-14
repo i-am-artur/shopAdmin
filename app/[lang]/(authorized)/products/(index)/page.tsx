@@ -1,6 +1,6 @@
 'use client';
 import { PageHeading } from '@/source/components/typography/Headings';
-import { Box, FormControl, InputLabel, MenuItem, Select, Stack, TextField } from '@mui/material';
+import { Box, FormControl, InputLabel, MenuItem, Select, Stack } from '@mui/material';
 import { box, unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowTurnDown } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +9,7 @@ import Filter from '@/source/components/Buttons/Filter/Filter';
 import ProductList from '@/app/[lang]/(authorized)/products/(index)/components/ProductList';
 import { urls } from '@/source/routes/routes';
 import Link from 'next/link';
+import Search from '../../../../../source/components/Form/Textfield/Search/Search';
 
 export default function Products() {
   return (
@@ -19,7 +20,7 @@ export default function Products() {
       </Stack>
 
       <Stack direction='row' justifyContent='space-between' columnGap={unit.gap.h}>
-        <TextField placeholder='Search' label='Search' />
+        <Search />
         <Filter />
       </Stack>
 

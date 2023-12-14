@@ -5,7 +5,7 @@ import Pagination from '@/source/components/Pagination/Pagination';
 import { Fragment } from 'react';
 import { urls } from '@/source/routes/routes';
 import { secondary } from '@/source/styles/colors';
-import Checkbox from '@/source/components/Checkbox/Checkbox';
+import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 
 export default function ProductList() {
   return (

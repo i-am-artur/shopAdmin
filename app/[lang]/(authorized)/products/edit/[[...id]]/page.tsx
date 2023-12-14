@@ -10,15 +10,16 @@ import { Tab, Tabs } from '@/source/components/Tabs/Tabs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { error } from '@/source/styles/colors';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
-import Checkbox from '@/source/components/Checkbox/Checkbox';
+import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 import General from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/General';
 import SEO from './components/SEO';
 import Discounts from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Discounts/Discounts';
-import Attributes from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Attributes';
+import Attributes from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Attributes/Attributes';
+import Quantity from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Quantity/Quantity';
 
 export default function ProductEditPage() {
   const [language, setLanguage] = useState('en');
-  const [section, setSection] = useState('Attributes');
+  const [section, setSection] = useState('Quantity');
 
   return (
     <Stack component='main' rowGap={box.gap.v}>
@@ -63,7 +64,7 @@ export default function ProductEditPage() {
         />
         <Tab label='Price/Properties' value='Price/Properties' />
         <Tab label='Images' value='Images' />
-        <Tab label='Quantity/Variants' value='Quantity/Variants' />
+        <Tab label='Quantity/Variants' value='Quantity' />
         <Tab label='Attributes' value='Attributes' />
         <Tab label='Options' value='Options' />
         <Tab label='Discounts' value='Discounts' />
@@ -74,6 +75,7 @@ export default function ProductEditPage() {
       {section === 'Attributes' && <Attributes />}
       {section === 'Discounts' && <Discounts />}
       {section === 'SEO' && <SEO />}
+      {section === 'Quantity' && <Quantity />}
     </Stack>
   );
 }

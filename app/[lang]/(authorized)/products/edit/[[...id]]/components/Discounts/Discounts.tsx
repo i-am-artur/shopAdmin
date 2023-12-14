@@ -15,7 +15,7 @@ export default function Discounts() {
       <Button variant='contained' color='secondary' startIcon={<FontAwesomeIcon icon={faPlusCircle} />}>
         Add discount
       </Button>
-      <Stack rowGap={item.gap.v}>
+      <Stack component='ul' rowGap={item.gap.v}>
         <li>
           <Discount />
         </li>

@@ -6,7 +6,7 @@ import { Table, TBody, TD, TH, THead, TR } from '@/source/components/table/Table
 import Pagination from '@/source/components/Pagination/Pagination';
 import { Fragment } from 'react';
 import { urls } from '@/source/routes/routes';
-import Checkbox from '@/source/components/Checkbox/Checkbox';
+import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 
 export default function Cats() {
   return (

@@ -1,9 +1,11 @@
 'use client';
-import { Button, FormControl, InputLabel, MenuItem, Select, Stack, TextField } from '@mui/material';
-import { box, unit } from '@/source/styles/layouts';
+import { Button, FormControl, InputLabel, MenuItem, Select, Stack } from '@mui/material';
+import { box, item, unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Filter from '@/source/components/Buttons/Filter/Filter';
+import Search from '@/source/components/Form/Textfield/Search/Search';
+import Attribute from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Attributes/components/Attribute';
 
 export default function Attributes() {
   return (
@@ -23,8 +25,17 @@ export default function Attributes() {
       </Stack>
 
       <Stack direction='row' justifyContent='space-between' columnGap={unit.gap.h}>
-        <TextField placeholder='Search' label='Search' fullWidth />
+        <Search />
         <Filter />
+      </Stack>
+
+      <Stack component='ul' rowGap={item.gap.v}>
+        <li>
+          <Attribute />
+        </li>
+        <li>
+          <Attribute />
+        </li>
       </Stack>
     </Stack>
   );
