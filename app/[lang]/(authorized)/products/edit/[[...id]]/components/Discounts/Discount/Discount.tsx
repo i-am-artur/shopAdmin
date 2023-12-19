@@ -2,8 +2,8 @@
 import { Box, Button, FormControl, MenuItem, Select, Stack, TextField } from '@mui/material';
 import { unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { Fieldset } from '@/source/components/Form/Fieldset/Fieldset';
+import { Fieldset } from '@/source/common/Form/Fieldset/Fieldset';
+import { sbDelete } from '../../../../../../../../../source/common/Icons/SbIcons';
 
 export default function Discount() {
   return (
@@ -28,13 +28,13 @@ export default function Discount() {
         <TextField
           fullWidth
           label='Quantity to be sold'
-          placeholder='Unlimited: blank'
+          placeholder='Leave blank if unlimited'
           variant='standard'
           inputProps={{ style: { textAlign: 'end' } }}
         />
       </Stack>
       <Box sx={{ color: 'red' }}>Final price: 2000 uah</Box>
-      <Button fullWidth color='primary' variant='contained' startIcon={<FontAwesomeIcon icon={faTrash} />}>
+      <Button fullWidth color='primary' variant='contained' startIcon={<FontAwesomeIcon icon={sbDelete} />}>
         Delete
       </Button>
     </Fieldset>

@@ -3,9 +3,9 @@ import { Button, FormControl, InputLabel, MenuItem, Select, Stack } from '@mui/m
 import { box, item, unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import Filter from '@/source/components/Buttons/Filter/Filter';
-import Search from '@/source/components/Form/Textfield/Search/Search';
 import Attribute from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Attributes/components/Attribute';
+import Search from '@/source/common/Form/Textfield/Search/Search';
+import Filter from '@/source/common/Buttons/Filter/Filter';
 
 export default function Attributes() {
   return (

@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import ThemeRegistry from '@/source/MUI/ThemeRegistry/ThemeRegistry';
 import StyledComponentsRegistry from '@/source/styles/StyledComponents/registry';
 import { defaultFont } from '@/source/styles/font';
-import { GlobalStyles } from '@/source/config/GlobalStyles';
+import { GlobalStyles } from '@/source/styles/GlobalStyles';
 import { Stack } from '@mui/material';
 import { body } from '@/source/styles/layouts';
 

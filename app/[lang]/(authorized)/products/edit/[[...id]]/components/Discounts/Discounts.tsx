@@ -4,7 +4,7 @@ import { box, item } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { secondary } from '@/source/styles/colors';
-import Discount from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Discounts/components/Discount';
+import Discount from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Discounts/Discount/Discount';
 
 export default function Discounts() {
   return (

@@ -1,25 +1,25 @@
 'use client';
-import { PageHeading } from '@/source/components/Typography/Headings';
 import { Button, FormControlLabel, Stack } from '@mui/material';
 import { box, unit } from '@/source/styles/layouts';
-import CancelBack from '@/source/components/Buttons/Back/CancelBack';
 import { useState } from 'react';
-import { Tab, Tabs } from '@/source/components/Tabs/Tabs';
-// import General from '@/app/[lang]/(authorized)/cats/edit/components/General';
-// import CatImage from '@/app/[lang]/(authorized)/cats/edit/components/CatImage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { error } from '@/source/styles/colors';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
-import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 import General from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/General';
 import SEO from './components/SEO';
 import Discounts from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Discounts/Discounts';
 import Attributes from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Attributes/Attributes';
 import Quantity from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Quantity/Quantity';
+import Images from './components/Images/Images';
+import { PageHeading } from '@/source/common/Typography/Headings';
+import CancelBack from '@/source/common/Buttons/Back/CancelBack';
+import Checkbox from '@/source/common/Form/Checkbox/Checkbox';
+import { Tab, Tabs } from '@/source/common/Tabs/Tabs';
+import Options from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Options/Options';
 
 export default function ProductEditPage() {
   const [language, setLanguage] = useState('en');
-  const [section, setSection] = useState('Quantity');
+  const [section, setSection] = useState('Options');
 
   return (
     <Stack component='main' rowGap={box.gap.v}>
@@ -76,6 +76,8 @@ export default function ProductEditPage() {
       {section === 'Discounts' && <Discounts />}
       {section === 'SEO' && <SEO />}
       {section === 'Quantity' && <Quantity />}
+      {section === 'Images' && <Images />}
+      {section === 'Options' && <Options />}
     </Stack>
   );
 }

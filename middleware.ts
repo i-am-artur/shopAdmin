@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getLanguageFrom } from '@/source/utils/translation/languages';
+import { getLanguageFrom } from './source/common/Translation/languages';
 
 export default async function middleware(req) {
   const url = `${req.nextUrl.pathname}${req.nextUrl.search}`;

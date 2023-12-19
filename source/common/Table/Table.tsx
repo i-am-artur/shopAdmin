@@ -34,3 +34,13 @@ export const TD = styled.td<{ $sx?: CSSProp }>`
 
   ${({ $sx }) => $sx ?? {}};
 `;
+
+// export const Caption = styled.figcaption<{ $sx?: CSSProp }>`
+//   margin-bottom: ${unit.gap.v}px;
+//   font-size: inherit;
+//   font-weight: bold;
+//
+//   ${({ $sx }) => $sx ?? {}};
+// `;
+
+// export const caption = { marginBottom: unit.gap.v, fontSize: 'inherit', fontWeight: 'bold' };

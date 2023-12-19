@@ -9,6 +9,8 @@ export const secondary = {
   // main: '#e4e7f1',
   // text: 'rgba(0, 0, 0, 0.54)',
   text: '#757575',
+  // text: '#515151',
+  // text: '#2e2e2e',
   bg: '#ebebeb'
 };
 

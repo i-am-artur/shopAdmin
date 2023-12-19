@@ -1,8 +1,7 @@
 'use client';
 import { Button, ButtonProps } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlusCircle, faReply } from '@fortawesome/free-solid-svg-icons';
-import { useRouter } from 'next/navigation';
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 export default function Add(rest: ButtonProps) {
   return (
