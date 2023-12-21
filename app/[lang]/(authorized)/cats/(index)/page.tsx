@@ -1,5 +1,5 @@
 'use client';
-import { PageHeading } from '@/source/components/typography/Headings';
+import { PageHeading } from '@/source/common/typography/Headings';
 import { Box, FormControl, InputLabel, MenuItem, Select, Stack, TextField } from '@mui/material';
 import { box, unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

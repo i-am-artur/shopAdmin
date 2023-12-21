@@ -7,6 +7,7 @@ import { secondary } from '@/source/styles/colors';
 import Features from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Options/Features/Features';
 import Selects from './Selects/Selects';
 import Text from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Options/Text/Text';
+import DateOption from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Options/Date/Date';
 
 export default function Options() {
   return (
@@ -29,10 +30,11 @@ export default function Options() {
           <FontAwesomeIcon icon={faPlus} size='2x' />
         </Button>
       </Stack>
-
       <Features />
       <Selects />
       <Text />
+      <DateOption />
+      date and time
     </Stack>
   );
 }

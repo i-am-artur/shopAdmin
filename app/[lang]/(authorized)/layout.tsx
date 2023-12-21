@@ -1,11 +1,14 @@
 'use client';
-import { IconButton, Stack } from '@mui/material';
+import { Drawer, IconButton, Stack } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
 import { body, box, unit } from '@/source/styles/layouts';
-import { Fragment, ReactNode } from 'react';
+import { Fragment, ReactNode, useState } from 'react';
+import Navigation from '@/source/common/Navigation/Navigation';
 
 export default function AuthorizedLayout({ children }: { children: ReactNode }) {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
     <Fragment>
       <Stack
@@ -20,7 +23,7 @@ export default function AuthorizedLayout({ children }: { children: ReactNode }) 
         sx={{ backgroundColor: 'black' }}
       >
         <Stack direction='row' columnGap={unit.gap.h} alignItems='center'>
-          <IconButton>
+          <IconButton onClick={() => setShowSidebar(true)}>
             <FontAwesomeIcon icon={faBars} size='lg' color='white' />
           </IconButton>
           Powered by AKO
@@ -29,7 +32,14 @@ export default function AuthorizedLayout({ children }: { children: ReactNode }) 
           <FontAwesomeIcon icon={faUser} size='lg' color='white' />
         </IconButton>
       </Stack>
-      {children}
+      <div>
+        <aside>
+          <Drawer open={showSidebar} onClose={() => setShowSidebar(false)}>
+            <Navigation />
+          </Drawer>
+        </aside>
+        {children}
+      </div>
     </Fragment>
   );
 }

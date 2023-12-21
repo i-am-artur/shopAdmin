@@ -26,6 +26,7 @@ export function GlobalStyles() {
             flexDirection: 'column'
           },
           a: {
+            color: 'blue',
             textDecoration: 'none !important'
           },
           'a:hover': {
