@@ -1,55 +1,44 @@
 'use client';
-import { Collapse, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
+import { Button, Collapse, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import Link from 'next/link';
 import { urls } from '@/source/routes/routes';
 import { paddedItem } from '@/source/common/Navigation/styles';
+import { INavItem, navItems } from '@/source/common/Navigation/data';
+import { box } from '@/source/styles/layouts';
 
 export default function Navigation() {
-  const [expanded, setExpanded] = useState({
-    catalog: false
-  });
+  function parseNavigation(navItems?: INavItem[]) {
+    if (!navItems) return;
 
-  function toggleExpanded(listItem: string) {
-    setExpanded((pre) => ({ ...pre, [listItem]: !pre[listItem] }));
+    return (
+      <List disablePadding>
+        {navItems.map((el, i) => (
+          <ListItem disablePadding>
+            <ListItemButton component={(el?.link ? Link : null) as any} to={el?.link}>
+              <ListItemText>{el.name.toUpperCase()}</ListItemText>
+            </ListItemButton>
+            {parseNavigation(el?.children)}
+          </ListItem>
+        ))}
+      </List>
+    );
   }
 
   return (
     <Stack
       component='nav'
       sx={{
-        '.MuiListItemButton-root': {
-          py: 3
-        }
+        // pt: box.gap.v,
+        minWidth: 180
+        // '.MuiListItemButton-root': {
+        //   py: 3
+        // }
       }}
     >
-      <List sx={{ minWidth: 180 }}>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemText primary='DASHBOARD' />
-          </ListItemButton>
-        </ListItem>
-
-        <ListItemButton>
-          <ListItemText primary='CATALOG' />
-          <FontAwesomeIcon icon={true ? faChevronUp : faChevronDown} />
-        </ListItemButton>
-        <Collapse in={true} timeout='auto' unmountOnExit>
-          <List component='div' disablePadding sx={paddedItem}>
-            <ListItemButton component={Link as any} to={urls.categories.index.path}>
-              <ListItemText primary='CATEGORIES' />
-            </ListItemButton>
-            <ListItemButton component={Link as any} to={urls.products.index.path}>
-              <ListItemText primary='PRODUCTS' />
-            </ListItemButton>
-            <ListItemButton component={Link as any} to='/'>
-              <ListItemText primary='BRANDS' />
-            </ListItemButton>
-          </List>
-        </Collapse>
-      </List>
+      {parseNavigation(navItems)}
     </Stack>
   );
 }
