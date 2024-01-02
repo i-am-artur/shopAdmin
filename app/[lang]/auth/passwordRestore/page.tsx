@@ -1,8 +1,8 @@
 import { Box, Button, Stack, TextField } from '@mui/material';
 import Link from 'next/link';
 import { urls } from '@/source/routes/routes';
-import { PageHeading } from '@/source/common/Typography/Headings';
-import LanguageSwitcher from '@/source/common/Translation/LanguageSwitcher';
+import { PageHeading } from '@/source/components/Typography/Headings';
+import LanguageSwitcher from '@/source/components/Translation/LanguageSwitcher';
 import { Fragment } from 'react';
 import { body, box, positionCenter } from '@/source/styles/layouts';
 

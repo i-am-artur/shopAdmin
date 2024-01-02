@@ -2,11 +2,11 @@
 import { IconButton, Link } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGrip } from '@fortawesome/free-solid-svg-icons';
-import { Table, TBody, TD, TH, THead, TR } from '@/source/common/table/Table';
-import Pagination from '@/source/common/Pagination/Pagination';
+import { Table, TBody, TD, TH, THead, TR } from '@/source/components/table/Table';
+import Pagination from '@/source/components/Pagination/Pagination';
 import { Fragment } from 'react';
 import { urls } from '@/source/routes/routes';
-import Checkbox from '@/source/common/Form/Checkbox/Checkbox';
+import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 
 export default function Cats() {
   return (

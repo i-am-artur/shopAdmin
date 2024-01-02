@@ -11,10 +11,10 @@ import Discounts from '@/app/[lang]/(authorized)/products/edit/[[...id]]/compone
 import Attributes from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Attributes/Attributes';
 import Quantity from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Quantity/Quantity';
 import Images from './components/Images/Images';
-import { PageHeading } from '@/source/common/Typography/Headings';
-import CancelBack from '@/source/common/Buttons/Back/CancelBack';
-import Checkbox from '@/source/common/Form/Checkbox/Checkbox';
-import { Tab, Tabs } from '@/source/common/Tabs/Tabs';
+import { PageHeading } from '@/source/components/Typography/Headings';
+import CancelBack from '@/source/components/Buttons/Back/CancelBack';
+import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
+import { Tab, Tabs } from '@/source/components/Tabs/Tabs';
 import Options from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Options/Options';
 
 export default function ProductEditPage() {

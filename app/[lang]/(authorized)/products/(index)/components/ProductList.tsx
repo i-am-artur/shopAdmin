@@ -1,9 +1,9 @@
 'use client';
 import { Fragment } from 'react';
 import { urls } from '@/source/routes/routes';
-import Checkbox from '@/source/common/Form/Checkbox/Checkbox';
-import { Table, TBody, TD, TH, THead, TR } from '@/source/common/Table/Table';
-import Pagination from '@/source/common/Pagination/Pagination';
+import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
+import { Table, TBody, TD, TH, THead, TR } from '@/source/components/Table/Table';
+import Pagination from '@/source/components/Pagination/Pagination';
 import Link from 'next/link';
 
 export default function ProductList() {

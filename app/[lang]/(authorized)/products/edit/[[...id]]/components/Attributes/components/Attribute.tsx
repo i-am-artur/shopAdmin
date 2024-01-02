@@ -3,8 +3,8 @@ import { Button, Stack, TextField } from '@mui/material';
 import { item } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
-import { Fieldset } from '@/source/common/Form/Fieldset/Fieldset';
-import { sbDelete } from '../../../../../../../../../source/common/Icons/SbIcons';
+import { Fieldset } from '@/source/components/Form/Fieldset/Fieldset';
+import { sbDelete } from '../../../../../../../../../source/components/Icons/SbIcons';
 
 const btnStyle = { minWidth: 'inherit', paddingLeft: 8, paddingRight: 8 };
 

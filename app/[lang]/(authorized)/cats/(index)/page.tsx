@@ -1,12 +1,12 @@
 'use client';
-import { PageHeading } from '@/source/common/typography/Headings';
+import { PageHeading } from '@/source/components/Typography/Headings';
 import { Box, FormControl, InputLabel, MenuItem, Select, Stack, TextField } from '@mui/material';
 import { box, unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowTurnDown } from '@fortawesome/free-solid-svg-icons';
 import Cats from '@/app/[lang]/(authorized)/cats/(index)/components/Cats';
-import Add from '@/source/common/Buttons/Add/Add';
-import Filter from '@/source/common/Buttons/Filter/Filter';
+import Add from '@/source/components/Buttons/Add/Add';
+import Filter from '@/source/components/Buttons/Filter/Filter';
 import Link from 'next/link';
 import { urls } from '@/source/routes/routes';
 import { ElementType } from 'react';

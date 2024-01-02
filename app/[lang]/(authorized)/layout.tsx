@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
 import { body, box, unit } from '@/source/styles/layouts';
 import { Fragment, ReactNode, useState } from 'react';
-import Navigation from '@/source/common/Navigation/Navigation';
+import Navigation from '@/source/components/Navigation/Navigation';
 
 export default function AuthorizedLayout({ children }: { children: ReactNode }) {
   const [showSidebar, setShowSidebar] = useState(false);

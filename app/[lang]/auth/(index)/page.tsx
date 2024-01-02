@@ -1,10 +1,10 @@
 import { Box, Button, Stack, TextField } from '@mui/material';
 import Link from 'next/link';
 import { urls } from '@/source/routes/routes';
-import LanguageSwitcher from '@/source/common/Translation/LanguageSwitcher';
+import LanguageSwitcher from '@/source/components/Translation/LanguageSwitcher';
 import { Fragment } from 'react';
 import { body, box, positionCenter } from '@/source/styles/layouts';
-import { PageHeading } from '@/source/common/typography/Headings';
+import { PageHeading } from '@/source/components/Typography/Headings';
 
 export default function LoginPage() {
   return (

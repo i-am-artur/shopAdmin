@@ -2,11 +2,11 @@
 import { Button, IconButton, Link, Stack } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { Table, TBody, TD, TH, THead, TR } from '@/source/common/table/Table';
+import { Table, TBody, TD, TH, THead, TR } from '@/source/components/table/Table';
 import { urls } from '@/source/routes/routes';
-import Checkbox from '@/source/common/Form/Checkbox/Checkbox';
-import { Caption } from '@/source/common/Table/Caption';
-import { sbDelete } from '@/source/common/Icons/SbIcons';
+import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
+import { Caption } from '@/source/components/Table/Caption';
+import { sbDelete } from '@/source/components/Icons/SbIcons';
 import { item } from '@/source/styles/layouts';
 
 export default function DateOption() {

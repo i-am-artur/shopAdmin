@@ -1,10 +1,10 @@
 'use client';
-import { PageHeading } from '@/source/common/typography/Headings';
+import { PageHeading } from '@/source/components/Typography/Headings';
 import { Button, Stack } from '@mui/material';
 import { box, unit } from '@/source/styles/layouts';
-import CancelBack from '@/source/common/Buttons/Back/CancelBack';
+import CancelBack from '@/source/components/Buttons/Back/CancelBack';
 import { useState } from 'react';
-import { Tab, Tabs } from '@/source/common/Tabs/Tabs';
+import { Tab, Tabs } from '@/source/components/Tabs/Tabs';
 import dynamic from 'next/dynamic';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { error } from '@/source/styles/colors';

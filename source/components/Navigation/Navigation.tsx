@@ -1,5 +1,5 @@
 'use client';
-import { NavItem, navItems } from '@/source/common/Navigation/data';
+import { NavItem, navItems } from '@/source/components/Navigation/data';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Box, Collapse, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
