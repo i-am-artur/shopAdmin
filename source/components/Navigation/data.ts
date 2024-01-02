@@ -1,3 +1,7 @@
+import { routeBrands } from "@/app/[lang]/(authorized)/brands/src/routes";
+import { routeCategory } from "@/app/[lang]/(authorized)/cats/src/routes";
+import { routeProducts } from "@/app/[lang]/(authorized)/products/src/routes";
+
 export type NavItem = {
   name: string;
   link: string;
@@ -12,9 +16,9 @@ export const navItems: NavItem[] = [
   {
     name: 'Catalog',
     subItems: [
-      { name: 'Categories', link: '/' },
-      { name: 'Products', link: '/' },
-      { name: 'Brands', link: '/' }
+      { name: 'Categories', link: routeCategory.index.path },
+      { name: 'Products', link: routeProducts.index.path },
+      { name: 'Brands', link: routeBrands.index.path }
     ]
   }
 ];

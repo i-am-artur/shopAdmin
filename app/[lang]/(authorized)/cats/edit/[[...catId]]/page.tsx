@@ -10,8 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { error } from '@/source/styles/colors';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
-const General = dynamic(() => import('@/app/[lang]/(authorized)/cats/edit/components/General'));
-const CatImage = dynamic(() => import('@/app/[lang]/(authorized)/cats/edit/components/CatImage'));
+const General = dynamic(() => import('@/app/[lang]/(authorized)/cats/edit/[[...catId]]/components/General'));
+const CatImage = dynamic(() => import('@/app/[lang]/(authorized)/cats/edit/[[...catId]]/components/CatImage'));
 
 export default function EditCatsPage() {
   const [language, setLanguage] = useState('en');

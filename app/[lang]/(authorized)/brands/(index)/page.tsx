@@ -4,18 +4,18 @@ import { Box, FormControl, InputLabel, MenuItem, Select, Stack, TextField } from
 import { box, unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowTurnDown } from '@fortawesome/free-solid-svg-icons';
-import Cats from '@/app/[lang]/(authorized)/cats/(index)/components/Cats';
 import Add from '@/source/components/Buttons/Add/Add';
 import Filter from '@/source/components/Buttons/Filter/Filter';
 import Link from 'next/link';
 import { urls } from '@/source/routes/routes';
 import { ElementType } from 'react';
+import Brands from './components/Brands';
 
 export default function BrandsPage() {
   return (
     <Stack rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>
-        <PageHeading>Categories</PageHeading>
+        <PageHeading>Brands</PageHeading>
         <Add component={Link as ElementType} href={urls.categories.edit.path} />
       </Stack>
 
@@ -39,7 +39,7 @@ export default function BrandsPage() {
         </FormControl>
       </Stack>
 
-      <Cats />
+      <Brands />
     </Stack>
   );
 }

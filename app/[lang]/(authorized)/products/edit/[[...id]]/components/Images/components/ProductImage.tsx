@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Fieldset } from '@/source/components/Form/Fieldset/Fieldset';
 import Image from 'next/image';
-import { sbDelete } from '../../../../../../../../../source/components/Icons/SbIcons';
+import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
 
 const btnStyle = { minWidth: 'inherit', paddingLeft: 8, paddingRight: 8 };
 
@@ -25,7 +25,7 @@ export default function ProductImage() {
           </Button>
         </Stack>
 
-        <Button fullWidth color='primary' variant='contained' startIcon={<FontAwesomeIcon icon={sbDelete} />}>
+        <Button fullWidth color='primary' variant='contained' startIcon={<DeleteIcon />}>
           Delete
         </Button>
       </Stack>

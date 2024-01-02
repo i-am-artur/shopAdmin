@@ -3,7 +3,7 @@ import { Box, Button, FormControl, MenuItem, Select, Stack, TextField } from '@m
 import { unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Fieldset } from '@/source/components/Form/Fieldset/Fieldset';
-import { sbDelete } from '../../../../../../../../../source/components/Icons/SbIcons';
+import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
 
 export default function Discount() {
   return (
@@ -34,7 +34,7 @@ export default function Discount() {
         />
       </Stack>
       <Box sx={{ color: 'red' }}>Final price: 2000 uah</Box>
-      <Button fullWidth color='primary' variant='contained' startIcon={<FontAwesomeIcon icon={sbDelete} />}>
+      <Button fullWidth color='primary' variant='contained' startIcon={<DeleteIcon />}>
         Delete
       </Button>
     </Fieldset>

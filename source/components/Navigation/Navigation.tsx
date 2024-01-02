@@ -6,7 +6,7 @@ import { Box, Collapse, List, ListItem, ListItemButton, ListItemText, Stack } fr
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function Navigation() {
+export default function Navigation({ onSelect }: { onSelect?: () => void }) {
   const [expanded, setExpanded] = useState<number[]>([]);
 
 
@@ -21,7 +21,10 @@ export default function Navigation() {
           <ListItem disablePadding >
             <ListItemButton
               {...('link' in el && { component: Link, to: el.link })}
-              onClick={() => hasSubItems && setExpanded(pre => pre.includes(i) ? pre.filter(item => item !== i) : [...pre, i])}
+              onClick={() => {
+                if (hasSubItems) return setExpanded(pre => pre.includes(i) ? pre.filter(item => item !== i) : [...pre, i]);
+                return onSelect && onSelect();
+              }}
             >
               <ListItemText sx={{ margin: 0 }} >
                 <Box pl={level * 10}>

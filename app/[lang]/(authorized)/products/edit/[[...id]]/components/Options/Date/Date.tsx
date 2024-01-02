@@ -6,8 +6,8 @@ import { Table, TBody, TD, TH, THead, TR } from '@/source/components/table/Table
 import { urls } from '@/source/routes/routes';
 import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 import { Caption } from '@/source/components/Table/Caption';
-import { sbDelete } from '@/source/components/Icons/SbIcons';
 import { item } from '@/source/styles/layouts';
+import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
 
 export default function DateOption() {
   return (
@@ -17,7 +17,7 @@ export default function DateOption() {
           <Stack direction='row' alignItems='center' justifyContent='space-between'>
             Date
             <Stack direction='row' alignItems='center' columnGap={item.gap.h}>
-              <IconButton variant='contained'>
+              <IconButton>
                 <FontAwesomeIcon icon={faTrashCan} />
               </IconButton>
               <Button
@@ -48,7 +48,9 @@ export default function DateOption() {
               <Link href={urls.categories.edit.path}>Departure date</Link>
             </TD>
             <TD $sx={{ textAlign: 'center' }}>
-              <IconButton>{sbDelete}</IconButton>
+              <IconButton>
+                <DeleteIcon />
+              </IconButton>
             </TD>
           </TR>
         </TBody>

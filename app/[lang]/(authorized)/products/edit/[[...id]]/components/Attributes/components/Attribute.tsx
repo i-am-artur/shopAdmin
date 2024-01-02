@@ -4,7 +4,7 @@ import { item } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Fieldset } from '@/source/components/Form/Fieldset/Fieldset';
-import { sbDelete } from '../../../../../../../../../source/components/Icons/SbIcons';
+import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
 
 const btnStyle = { minWidth: 'inherit', paddingLeft: 8, paddingRight: 8 };
 
@@ -29,7 +29,7 @@ export default function Attribute() {
           fullWidth
           color='primary'
           variant='contained'
-          startIcon={<FontAwesomeIcon icon={sbDelete} />}
+          startIcon={<DeleteIcon />}
           style={{ minWidth: 'auto', flex: '1 0 35%' }}
         >
           Delete

@@ -2,7 +2,7 @@
 import { IconButton, Link } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGrip } from '@fortawesome/free-solid-svg-icons';
-import { Table, TBody, TD, TH, THead, TR } from '@/source/components/table/Table';
+import { Table, TBody, TD, TH, THead, TR } from '@/source/components/Table/Table';
 import Pagination from '@/source/components/Pagination/Pagination';
 import { Fragment } from 'react';
 import { urls } from '@/source/routes/routes';

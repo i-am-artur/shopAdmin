@@ -34,7 +34,7 @@ export default function AuthorizedLayout({ children }: { children: ReactNode }) 
       </Stack>
       <aside>
         <Drawer open={showSidebar} onClose={() => setShowSidebar(false)}>
-          <Navigation />
+          <Navigation onSelect={() => setShowSidebar(false)} />
         </Drawer>
       </aside>
       {children}
