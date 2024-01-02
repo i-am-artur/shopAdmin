@@ -5,6 +5,8 @@ import { ChangeEvent, MouseEvent, useState } from 'react';
 export const defaultPage = 0;
 export const defaultRowsPerPage = 10;
 
+// TODO: review this component
+
 export default function Pagination(props: {
   page?: number;
   rowsPerPage?: number;

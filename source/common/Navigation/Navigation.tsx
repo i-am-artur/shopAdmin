@@ -1,44 +1,56 @@
 'use client';
-import { Button, Collapse, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NavItem, navItems } from '@/source/common/Navigation/data';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Box, Collapse, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
 import Link from 'next/link';
-import { urls } from '@/source/routes/routes';
-import { paddedItem } from '@/source/common/Navigation/styles';
-import { INavItem, navItems } from '@/source/common/Navigation/data';
-import { box } from '@/source/styles/layouts';
+import { useState } from 'react';
 
 export default function Navigation() {
-  function parseNavigation(navItems?: INavItem[]) {
+  const [expanded, setExpanded] = useState<number[]>([]);
+
+
+  function parseNavigation(navItems?: NavItem[], level: number = 0) {
     if (!navItems) return;
 
-    return (
-      <List disablePadding>
-        {navItems.map((el, i) => (
-          <ListItem disablePadding>
-            <ListItemButton component={(el?.link ? Link : null) as any} to={el?.link}>
-              <ListItemText>{el.name.toUpperCase()}</ListItemText>
+    return navItems.map((el, i) => {
+      const hasSubItems = 'subItems' in el;
+      return (
+        <List key={i} disablePadding >
+
+          <ListItem disablePadding >
+            <ListItemButton
+              {...('link' in el && { component: Link, to: el.link })}
+              onClick={() => hasSubItems && setExpanded(pre => pre.includes(i) ? pre.filter(item => item !== i) : [...pre, i])}
+            >
+              <ListItemText sx={{ margin: 0 }} >
+                <Box pl={level * 10}>
+                  {el.name.toUpperCase()}
+                </Box>
+              </ListItemText>
+              {hasSubItems && <FontAwesomeIcon icon={expanded.includes(i) ? faChevronUp : faChevronDown} />}
             </ListItemButton>
-            {parseNavigation(el?.children)}
           </ListItem>
-        ))}
-      </List>
-    );
+
+          {hasSubItems && <Collapse in={expanded.includes(i)}>
+            {parseNavigation(el.subItems, i)}
+          </Collapse>}
+
+        </List >
+      )
+    })
+
+
   }
 
   return (
-    <Stack
+    <Box
       component='nav'
       sx={{
-        // pt: box.gap.v,
         minWidth: 180
-        // '.MuiListItemButton-root': {
-        //   py: 3
-        // }
       }}
     >
       {parseNavigation(navItems)}
-    </Stack>
+    </Box>
   );
 }

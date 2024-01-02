@@ -1,16 +1,20 @@
-export interface INavItem {
+export type NavItem = {
   name: string;
-  link?: string;
-  children?: INavItem[];
-}
+  link: string;
+} | {
+  name: string;
+  subItems: NavItem[];
+};
 
-export const navItems: INavItem[] = [
-  { name: 'Home', link: '/' },
+
+export const navItems: NavItem[] = [
+  { name: 'Dashboard', link: '/' },
   {
     name: 'Catalog',
-    children: [
+    subItems: [
       { name: 'Categories', link: '/' },
-      { name: 'Products', link: '/' }
+      { name: 'Products', link: '/' },
+      { name: 'Brands', link: '/' }
     ]
   }
 ];

@@ -5,14 +5,5 @@ import { unit } from '@/source/styles/layouts';
 export default function Checkbox(props: CheckboxProps & { variant?: 'regular' | 'unit' }) {
   const { variant, ...rest } = props;
 
-  function getPadding() {
-    switch (variant) {
-      case 'unit':
-        return `0 ${unit.gap.h}px`;
-      default:
-        return 0;
-    }
-  }
-
-  return <MuiCheckbox sx={{ padding: getPadding() }} {...rest} />;
+  return <MuiCheckbox sx={{ padding: variant === 'unit' ? `0 ${unit.gap.h}px` : 0 }} {...rest} />;
 }

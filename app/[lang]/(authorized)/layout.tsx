@@ -32,14 +32,12 @@ export default function AuthorizedLayout({ children }: { children: ReactNode }) 
           <FontAwesomeIcon icon={faUser} size='lg' color='white' />
         </IconButton>
       </Stack>
-      <div>
-        <aside>
-          <Drawer open={showSidebar} onClose={() => setShowSidebar(false)}>
-            <Navigation />
-          </Drawer>
-        </aside>
-        {children}
-      </div>
+      <aside>
+        <Drawer open={showSidebar} onClose={() => setShowSidebar(false)}>
+          <Navigation />
+        </Drawer>
+      </aside>
+      {children}
     </Fragment>
   );
 }
