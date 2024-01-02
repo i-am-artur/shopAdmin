@@ -6,7 +6,7 @@ import { Table, TBody, TD, TH, THead, TR } from '@/source/components/Table/Table
 import Pagination from '@/source/components/Pagination/Pagination';
 import Link from 'next/link';
 
-export default function ProductList() {
+export default function Products() {
   return (
     <Fragment>
       <Table>

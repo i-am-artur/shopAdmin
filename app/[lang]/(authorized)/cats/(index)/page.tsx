@@ -11,7 +11,7 @@ import Link from 'next/link';
 import { urls } from '@/source/routes/routes';
 import { ElementType } from 'react';
 
-export default function Categories() {
+export default function CategoriesPage() {
   return (
     <Stack rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>

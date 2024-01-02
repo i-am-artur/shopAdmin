@@ -8,7 +8,7 @@ import { Fragment } from 'react';
 import { urls } from '@/source/routes/routes';
 import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 
-export default function Cats() {
+export default function Brands() {
   return (
     <Fragment>
       <Table>

@@ -6,12 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowTurnDown } from '@fortawesome/free-solid-svg-icons';
 import Add from '@/source/components/Buttons/Add/Add';
 import Filter from '@/source/components/Buttons/Filter/Filter';
-import ProductList from '@/app/[lang]/(authorized)/products/(index)/components/ProductList';
+import Products from '@/app/[lang]/(authorized)/products/(index)/components/Products';
 import { urls } from '@/source/routes/routes';
 import Link from 'next/link';
 import Search from '@/source/components/Form/Textfield/Search/Search';
 
-export default function Products() {
+export default function ProductsPage() {
   return (
     <Stack rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>
@@ -38,7 +38,7 @@ export default function Products() {
         </FormControl>
       </Stack>
 
-      <ProductList />
+      <Products />
     </Stack>
   );
 }

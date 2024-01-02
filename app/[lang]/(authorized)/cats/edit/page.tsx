@@ -13,7 +13,7 @@ import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 const General = dynamic(() => import('@/app/[lang]/(authorized)/cats/edit/components/General'));
 const CatImage = dynamic(() => import('@/app/[lang]/(authorized)/cats/edit/components/CatImage'));
 
-export default function EditCats() {
+export default function EditCatsPage() {
   const [language, setLanguage] = useState('en');
   const [section, setSection] = useState('general');
 

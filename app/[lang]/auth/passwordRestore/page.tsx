@@ -6,7 +6,7 @@ import LanguageSwitcher from '@/source/components/Translation/LanguageSwitcher';
 import { Fragment } from 'react';
 import { body, box, positionCenter } from '@/source/styles/layouts';
 
-export default function LoginPage() {
+export default function PasswordRestorePage() {
   return (
     <Fragment>
       <Stack component='header' direction='row' alignItems='center' justifyContent='space-between'>
