@@ -7,7 +7,7 @@ import Pagination from '@/source/components/Pagination/Pagination';
 import { Fragment } from 'react';
 import { urls } from '@/source/routes/routes';
 import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
-import { routeCategory } from '../../src/routes';
+import { routeCategories } from '../../src/routes';
 import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
 
 export default function Cats() {
@@ -29,7 +29,7 @@ export default function Cats() {
               <Checkbox aria-label='checkbox category' />
             </TD>
             <TD>
-              <Link href={routeCategory.edit.path}>name</Link>
+              <Link href={routeCategories.edit.path}>name</Link>
             </TD>
             <TD $sx={{ textAlign: 'center' }}>
               <IconButton>

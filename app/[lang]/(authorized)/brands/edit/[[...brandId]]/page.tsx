@@ -23,7 +23,7 @@ export default function EditBrandPage() {
         </Stack>
       </Stack>
 
-      {/* //TODO: make independant language component */}
+      {/* //TODO: make independent language component */}
 
       <Tabs
         value={language}

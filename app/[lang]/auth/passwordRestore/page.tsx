@@ -1,6 +1,6 @@
 import { Box, Button, Stack, TextField } from '@mui/material';
 import Link from 'next/link';
-import { urls } from '@/source/routes/routes';
+import { route } from '@/source/routes/routes';
 import { PageHeading } from '@/source/components/Typography/Headings';
 import LanguageSwitcher from '@/source/components/Translation/LanguageSwitcher';
 import { Fragment } from 'react';
@@ -22,7 +22,7 @@ export default function PasswordRestorePage() {
               <Button variant='contained'>Submit</Button>
             </Stack>
           </Box>
-          <Link href={urls.auth.login.path}>Login</Link>
+          <Link href={route.auth.login.path}>Login</Link>
         </Stack>
       </Stack>
     </Fragment>

@@ -1,6 +1,6 @@
 import { Box, Button, Stack, TextField } from '@mui/material';
 import Link from 'next/link';
-import { urls } from '@/source/routes/routes';
+import { route } from '@/source/routes/routes';
 import LanguageSwitcher from '@/source/components/Translation/LanguageSwitcher';
 import { Fragment } from 'react';
 import { body, box, positionCenter } from '@/source/styles/layouts';
@@ -25,7 +25,7 @@ export default function LoginPage() {
               <Button variant='contained'>Submit</Button>
             </Stack>
           </Box>
-          <Link href={urls.auth.passwordRestore.path}>Forgot password?</Link>
+          <Link href={route.auth.passwordRestore.path}>Forgot password?</Link>
         </Stack>
       </Stack>
     </Fragment>

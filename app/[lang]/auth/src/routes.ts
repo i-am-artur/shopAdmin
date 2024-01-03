@@ -1,4 +1,4 @@
-export const auth = {
+export const routeAuth = {
   login: {
     path: '/auth',
     protected: false

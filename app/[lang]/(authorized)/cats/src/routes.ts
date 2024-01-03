@@ -1,6 +1,6 @@
 // alternative name for path, url
 
-export const routeCategory = {
+export const routeCategories = {
     index: {
         path: '/cats',
         private: true
