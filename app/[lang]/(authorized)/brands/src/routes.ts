@@ -3,4 +3,8 @@ export const routeBrands = {
         path: '/brands',
         private: true
     },
+    edit: {
+        path: '/brands/edit',
+        private: true
+    },
 };

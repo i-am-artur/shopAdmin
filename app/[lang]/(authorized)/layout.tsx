@@ -33,7 +33,7 @@ export default function AuthorizedLayout({ children }: { children: ReactNode }) 
         </IconButton>
       </Stack>
       <aside>
-        <Drawer open={showSidebar} onClose={() => setShowSidebar(false)}>
+        <Drawer open={showSidebar} onClose={() => setShowSidebar(false)} ModalProps={{ keepMounted: true }}>
           <Navigation onSelect={() => setShowSidebar(false)} />
         </Drawer>
       </aside>

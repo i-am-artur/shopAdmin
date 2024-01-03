@@ -10,13 +10,14 @@ import Link from 'next/link';
 import { urls } from '@/source/routes/routes';
 import { ElementType } from 'react';
 import Brands from './components/Brands';
+import { routeBrands } from '../src/routes';
 
 export default function BrandsPage() {
   return (
     <Stack rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>
         <PageHeading>Brands</PageHeading>
-        <Add component={Link as ElementType} href={urls.categories.edit.path} />
+        <Add component={Link} href={routeBrands.edit.path} />
       </Stack>
 
       <Stack direction='row' justifyContent='space-between' columnGap={unit.gap.h}>

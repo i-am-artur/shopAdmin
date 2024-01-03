@@ -2,7 +2,7 @@
 import { Button, IconButton, Link, Stack } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { Table, TBody, TD, TH, THead, TR } from '@/source/components/table/Table';
+import { Table, TBody, TD, TH, THead, TR } from '@/source/components/Table/Table';
 import { urls } from '@/source/routes/routes';
 import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 import { Caption } from '@/source/components/Table/Caption';

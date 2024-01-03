@@ -17,7 +17,7 @@ export default function Text() {
           <Stack direction='row' alignItems='center' justifyContent='space-between'>
             Text
             <Stack direction='row' alignItems='center' columnGap={item.gap.h}>
-              <IconButton variant='contained'>
+              <IconButton>
                 <FontAwesomeIcon icon={faTrashCan} />
               </IconButton>
               <Button

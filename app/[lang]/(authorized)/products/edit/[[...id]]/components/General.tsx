@@ -22,7 +22,7 @@ export default function General() {
       <TextField label='Short description (EN)' rows={3} multiline />
       <TextField label='Description (EN)' rows={8} multiline />
 
-      {/*  TODO: Move to locations/quantity */}
+      {/*  // TODO: Move to locations/quantity */}
       <FormControlLabel
         control={<Checkbox variant='unit' aria-label='Sell only from online location' />}
         label='Sell only from online location'

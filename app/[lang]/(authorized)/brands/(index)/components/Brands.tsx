@@ -7,6 +7,7 @@ import Pagination from '@/source/components/Pagination/Pagination';
 import { Fragment } from 'react';
 import { urls } from '@/source/routes/routes';
 import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
+import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
 
 export default function Brands() {
   return (
@@ -18,7 +19,7 @@ export default function Brands() {
               <Checkbox aria-label='select all categories' />
             </TH>
             <TH $sx={{ width: '100%' }}>Name</TH>
-            <TH>Position</TH>
+            <TH>Delete</TH>
           </TR>
         </THead>
         <TBody>
@@ -31,12 +32,13 @@ export default function Brands() {
             </TD>
             <TD $sx={{ textAlign: 'center' }}>
               <IconButton>
-                <FontAwesomeIcon icon={faGrip} />
+                <DeleteIcon />
               </IconButton>
             </TD>
           </TR>
         </TBody>
       </Table>
+
       <Pagination />
     </Fragment>
   );
