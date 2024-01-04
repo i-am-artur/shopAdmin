@@ -1,13 +1,11 @@
 'use client';
-import { IconButton, Link } from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGrip } from '@fortawesome/free-solid-svg-icons';
-import { Table, TBody, TD, TH, THead, TR } from '@/source/components/Table/Table';
-import Pagination from '@/source/components/Pagination/Pagination';
-import { Fragment } from 'react';
-import { urls } from '@/source/routes/routes';
 import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
+import Pagination from '@/source/components/Pagination/Pagination';
+import { TBody, TD, TH, THead, TR, Table } from '@/source/components/Table/Table';
+import { route } from '@/source/routes/routes';
+import { IconButton, Link } from '@mui/material';
+import { Fragment } from 'react';
 
 export default function Brands() {
   return (
@@ -16,7 +14,7 @@ export default function Brands() {
         <THead>
           <TR>
             <TH>
-              <Checkbox aria-label='select all categories' />
+              <Checkbox aria-label='select all brands' />
             </TH>
             <TH $sx={{ width: '100%' }}>Name</TH>
             <TH>Delete</TH>
@@ -28,7 +26,7 @@ export default function Brands() {
               <Checkbox aria-label='checkbox category' />
             </TD>
             <TD>
-              <Link href={urls.categories.edit.path}>name</Link>
+              <Link href={route.brands.edit.path}>name</Link>
             </TD>
             <TD $sx={{ textAlign: 'center' }}>
               <IconButton>

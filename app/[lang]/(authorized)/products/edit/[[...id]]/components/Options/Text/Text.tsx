@@ -3,7 +3,7 @@ import { Button, IconButton, Link, Stack } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { Table, TBody, TD, TH, THead, TR } from '@/source/components/Table/Table';
-import { urls } from '@/source/routes/routes';
+import { route } from '@/source/routes/routes';
 import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 import { Caption } from '@/source/components/Table/Caption';
 import { item } from '@/source/styles/layouts';
@@ -45,7 +45,7 @@ export default function Text() {
               <Checkbox aria-label='select feature' />
             </TD>
             <TD>
-              <Link href={urls.categories.edit.path}>Comment</Link>
+              <Link href={route.categories.edit.path}>Comment</Link>
             </TD>
             <TD $sx={{ textAlign: 'center' }}>
               <IconButton>

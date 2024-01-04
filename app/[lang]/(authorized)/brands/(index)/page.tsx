@@ -1,16 +1,14 @@
 'use client';
-import { PageHeading } from '@/source/components/Typography/Headings';
-import { Box, FormControl, InputLabel, MenuItem, Select, Stack, TextField } from '@mui/material';
-import { box, unit } from '@/source/styles/layouts';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowTurnDown } from '@fortawesome/free-solid-svg-icons';
 import Add from '@/source/components/Buttons/Add/Add';
 import Filter from '@/source/components/Buttons/Filter/Filter';
-import Link from 'next/link';
+import { PageHeading } from '@/source/components/Typography/Headings';
 import { route } from '@/source/routes/routes';
-import { ElementType } from 'react';
+import { box, unit } from '@/source/styles/layouts';
+import { faArrowTurnDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Box, FormControl, InputLabel, MenuItem, Select, Stack, TextField } from '@mui/material';
+import Link from 'next/link';
 import Brands from './components/Brands';
-import { routeBrands } from '../src/routes';
 
 export default function BrandsPage() {
   return (
@@ -33,7 +31,7 @@ export default function BrandsPage() {
           <InputLabel id='demo-simple-select-label' size='small'>
             Action
           </InputLabel>
-          <Select labelId='demo-simple-select-label' id='demo-simple-select' value='' label='Action'>
+          <Select labelId='demo-simple-select-label' id='demo-simple-select' value={null} label='Action'>
             <MenuItem value={10}>Delete</MenuItem>
             <MenuItem value={20}>Set parent category</MenuItem>
           </Select>

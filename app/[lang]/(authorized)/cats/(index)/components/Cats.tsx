@@ -5,7 +5,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Table, TBody, TD, TH, THead, TR } from '@/source/components/Table/Table';
 import Pagination from '@/source/components/Pagination/Pagination';
 import { Fragment } from 'react';
-import { urls } from '@/source/routes/routes';
+import { route } from '@/source/routes/routes';
 import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 import { routeCategories } from '../../src/routes';
 import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
@@ -29,7 +29,7 @@ export default function Cats() {
               <Checkbox aria-label='checkbox category' />
             </TD>
             <TD>
-              <Link href={routeCategories.edit.path}>name</Link>
+              <Link href={route.categories.edit.path}>name</Link>
             </TD>
             <TD $sx={{ textAlign: 'center' }}>
               <IconButton>

@@ -1,6 +1,6 @@
 'use client';
 import { Fragment } from 'react';
-import { urls } from '@/source/routes/routes';
+import { route } from '@/source/routes/routes';
 import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 import { Table, TBody, TD, TH, THead, TR } from '@/source/components/Table/Table';
 import Pagination from '@/source/components/Pagination/Pagination';
@@ -25,7 +25,7 @@ export default function Products() {
               <Checkbox aria-label='select product' />
             </TD>
             <TD>
-              <Link href={urls.products.edit.path}>name</Link>
+              <Link href={route.products.edit.path}>name</Link>
             </TD>
             <TD>33</TD>
           </TR>

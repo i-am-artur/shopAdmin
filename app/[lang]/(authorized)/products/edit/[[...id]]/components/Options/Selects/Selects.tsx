@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { Table, TBody, TD, TH, THead, TR } from '@/source/components/Table/Table';
 import { Fragment } from 'react';
-import { urls } from '@/source/routes/routes';
+import { route } from '@/source/routes/routes';
 import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
 import { Caption } from '@/source/components/Table/Caption';
 import { item } from '@/source/styles/layouts';
@@ -47,7 +47,7 @@ export default function Selects() {
               <Checkbox aria-label='select feature' />
             </TD>
             <TD>
-              <Link href={urls.categories.edit.path}>name</Link>
+              <Link href={route.categories.edit.path}>name</Link>
             </TD>
             <TD>+$3.99</TD>
             <TD $sx={{ textAlign: 'center' }}>

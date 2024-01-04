@@ -7,7 +7,7 @@ import { faArrowTurnDown } from '@fortawesome/free-solid-svg-icons';
 import Add from '@/source/components/Buttons/Add/Add';
 import Filter from '@/source/components/Buttons/Filter/Filter';
 import Products from '@/app/[lang]/(authorized)/products/(index)/components/Products';
-import { urls } from '@/source/routes/routes';
+import { route } from '@/source/routes/routes';
 import Link from 'next/link';
 import Search from '@/source/components/Form/Textfield/Search/Search';
 
@@ -16,7 +16,7 @@ export default function ProductsPage() {
     <Stack rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>
         <PageHeading>Products</PageHeading>
-        <Add component={Link as any} href={urls.products.edit.path} />
+        <Add component={Link as any} href={route.products.edit.path} />
       </Stack>
 
       <Stack direction='row' justifyContent='space-between' columnGap={unit.gap.h}>
