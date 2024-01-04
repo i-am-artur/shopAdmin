@@ -3,9 +3,9 @@ import { Button, Stack, TextField } from '@mui/material';
 import { item } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
-import { Fieldset } from '@/source/components/Form/Fieldset/Fieldset';
+import { Fieldset } from '@/source/instances/Form/Fieldset/Fieldset';
 import Image from 'next/image';
-import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
+import { DeleteIcon } from '@/source/instances/Icons/DeleteIcon';
 
 const btnStyle = { minWidth: 'inherit', paddingLeft: 8, paddingRight: 8 };
 

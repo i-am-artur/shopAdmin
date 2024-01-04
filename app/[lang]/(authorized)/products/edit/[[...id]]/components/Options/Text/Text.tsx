@@ -2,12 +2,12 @@
 import { Button, IconButton, Link, Stack } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { Table, TBody, TD, TH, THead, TR } from '@/source/components/Table/Table';
+import { Table, TBody, TD, TH, THead, TR } from '@/source/instances/Table/Table';
 import { route } from '@/source/routes/routes';
-import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
-import { Caption } from '@/source/components/Table/Caption';
+import Checkbox from '@/source/instances/Form/Checkbox/Checkbox';
+import { Caption } from '@/source/instances/Table/Caption';
 import { item } from '@/source/styles/layouts';
-import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
+import { DeleteIcon } from '@/source/instances/Icons/DeleteIcon';
 
 export default function Text() {
   return (

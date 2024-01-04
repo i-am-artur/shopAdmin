@@ -2,8 +2,8 @@
 import { Box, Button, FormControl, MenuItem, Select, Stack, TextField } from '@mui/material';
 import { unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Fieldset } from '@/source/components/Form/Fieldset/Fieldset';
-import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
+import { Fieldset } from '@/source/instances/Form/Fieldset/Fieldset';
+import { DeleteIcon } from '@/source/instances/Icons/DeleteIcon';
 
 export default function Discount() {
   return (

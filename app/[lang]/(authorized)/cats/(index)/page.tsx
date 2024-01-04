@@ -1,8 +1,8 @@
 'use client';
 import Cats from '@/app/[lang]/(authorized)/cats/(index)/components/Cats';
-import Add from '@/source/components/Buttons/Add/Add';
-import Filter from '@/source/components/Buttons/Filter/Filter';
-import { PageHeading } from '@/source/components/Typography/Headings';
+import Add from '@/source/instances/Buttons/Add/Add';
+import Filter from '@/source/instances/Buttons/Filter/Filter';
+import { PageHeading } from '@/source/instances/Typography/Headings';
 import { route } from '@/source/routes/routes';
 import { box, unit } from '@/source/styles/layouts';
 import { faArrowTurnDown } from '@fortawesome/free-solid-svg-icons';

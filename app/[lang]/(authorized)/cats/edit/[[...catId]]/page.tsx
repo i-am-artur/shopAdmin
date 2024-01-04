@@ -1,17 +1,19 @@
 'use client';
-import { PageHeading } from '@/source/components/Typography/Headings';
+import { PageHeading } from '@/source/instances/Typography/Headings';
 import { Button, Stack } from '@mui/material';
 import { box, unit } from '@/source/styles/layouts';
-import CancelBack from '@/source/components/Buttons/Back/CancelBack';
+import CancelBack from '@/source/instances/Buttons/Back/CancelBack';
 import { useState } from 'react';
-import { Tab, Tabs } from '@/source/components/Tabs/Tabs';
+import { Tab, Tabs } from '@/source/instances/Tabs/Tabs';
 import dynamic from 'next/dynamic';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { error } from '@/source/styles/colors';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 const General = dynamic(() => import('@/app/[lang]/(authorized)/cats/edit/[[...catId]]/components/General'));
-const CatImage = dynamic(() => import('@/app/[lang]/(authorized)/cats/edit/[[...catId]]/components/CatImage'));
+const CatImage = dynamic(
+  () => import('@/app/[lang]/(authorized)/cats/edit/[[...catId]]/components/CatImage')
+);
 
 export default function EditCatsPage() {
   const [language, setLanguage] = useState('en');

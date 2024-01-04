@@ -2,13 +2,13 @@
 import { IconButton, Link } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { Table, TBody, TD, TH, THead, TR } from '@/source/components/Table/Table';
-import Pagination from '@/source/components/Pagination/Pagination';
+import { Table, TBody, TD, TH, THead, TR } from '@/source/instances/Table/Table';
+import Pagination from '@/source/instances/Pagination/Pagination';
 import { Fragment } from 'react';
 import { route } from '@/source/routes/routes';
-import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
+import Checkbox from '@/source/instances/Form/Checkbox/Checkbox';
 import { routeCategories } from '../../src/routes';
-import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
+import { DeleteIcon } from '@/source/instances/Icons/DeleteIcon';
 
 export default function Cats() {
   return (

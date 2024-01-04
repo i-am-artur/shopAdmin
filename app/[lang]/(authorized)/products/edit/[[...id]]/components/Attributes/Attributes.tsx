@@ -4,8 +4,8 @@ import { box, item, unit } from '@/source/styles/layouts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Attribute from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Attributes/components/Attribute';
-import Search from '@/source/components/Form/Textfield/Search/Search';
-import Filter from '@/source/components/Buttons/Filter/Filter';
+import Search from '@/source/instances/Form/Textfield/Search/Search';
+import Filter from '@/source/instances/Buttons/Filter/Filter';
 
 export default function Attributes() {
   return (

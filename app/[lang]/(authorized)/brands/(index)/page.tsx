@@ -1,7 +1,7 @@
 'use client';
-import Add from '@/source/components/Buttons/Add/Add';
-import Filter from '@/source/components/Buttons/Filter/Filter';
-import { PageHeading } from '@/source/components/Typography/Headings';
+import Add from '@/source/instances/Buttons/Add/Add';
+import Filter from '@/source/instances/Buttons/Filter/Filter';
+import { PageHeading } from '@/source/instances/Typography/Headings';
 import { route } from '@/source/routes/routes';
 import { box, unit } from '@/source/styles/layouts';
 import { faArrowTurnDown } from '@fortawesome/free-solid-svg-icons';
@@ -31,7 +31,7 @@ export default function BrandsPage() {
           <InputLabel id='demo-simple-select-label' size='small'>
             Action
           </InputLabel>
-          <Select labelId='demo-simple-select-label' id='demo-simple-select' value={null} label='Action'>
+          <Select labelId='demo-simple-select-label' id='demo-simple-select' value={''} label='Action'>
             <MenuItem value={10}>Delete</MenuItem>
             <MenuItem value={20}>Set parent category</MenuItem>
           </Select>

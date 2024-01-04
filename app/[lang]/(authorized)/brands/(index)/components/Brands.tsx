@@ -1,8 +1,8 @@
 'use client';
-import Checkbox from '@/source/components/Form/Checkbox/Checkbox';
-import { DeleteIcon } from '@/source/components/Icons/DeleteIcon';
-import Pagination from '@/source/components/Pagination/Pagination';
-import { TBody, TD, TH, THead, TR, Table } from '@/source/components/Table/Table';
+import Checkbox from '@/source/instances/Form/Checkbox/Checkbox';
+import { DeleteIcon } from '@/source/instances/Icons/DeleteIcon';
+import Pagination from '@/source/instances/Pagination/Pagination';
+import { TBody, TD, TH, THead, TR, Table } from '@/source/instances/Table/Table';
 import { route } from '@/source/routes/routes';
 import { IconButton, Link } from '@mui/material';
 import { Fragment } from 'react';
