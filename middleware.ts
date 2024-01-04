@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server';
-import { getLanguageFrom } from './source/instances/Translation/utils';
+import { NextRequest, NextResponse } from 'next/server';
+import { getLanguageFrom } from './source/instances/Translation/languages';
 
-export default async function middleware(req) {
+export default async function middleware(req: NextRequest) {
   const url = `${req.nextUrl.pathname}${req.nextUrl.search}`;
 
   const currentLanguage = getLanguageFrom(url);

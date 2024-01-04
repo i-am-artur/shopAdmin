@@ -16,6 +16,7 @@ import CancelBack from '@/source/instances/Buttons/Back/CancelBack';
 import Checkbox from '@/source/instances/Form/Checkbox/Checkbox';
 import { Tab, Tabs } from '@/source/instances/Tabs/Tabs';
 import Options from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Options/Options';
+import UserLanguages from '@/source/instances/Tabs/UserLanguages/UserLanguages';
 
 export default function ProductEditPage() {
   const [language, setLanguage] = useState('en');
@@ -36,22 +37,7 @@ export default function ProductEditPage() {
         label='Product is visible'
       />
 
-      <Tabs
-        value={language}
-        onChange={(event, value) => setLanguage(value)}
-        $upperCase
-        aria-label='languages'
-      >
-        <Tab
-          label={
-            <Stack direction='row' columnGap={4} alignItems='center'>
-              en <FontAwesomeIcon icon={faExclamationCircle} color={error.main} />
-            </Stack>
-          }
-          value='en'
-        />
-        <Tab label='ru' value='ru' />
-      </Tabs>
+      <UserLanguages languagesWithError={['en']} />
 
       <Tabs value={section} onChange={(event, value) => setSection(value)} aria-label='sections'>
         <Tab
