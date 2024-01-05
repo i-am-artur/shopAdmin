@@ -19,7 +19,7 @@ export default function Features() {
             Features
             <Stack direction='row' alignItems='center' columnGap={item.gap.h}>
               <IconButton>
-                <FontAwesomeIcon icon={faTrashCan} />
+                <DeleteIcon />
               </IconButton>
               <Button
                 variant='contained'

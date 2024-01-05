@@ -6,5 +6,5 @@ interface Props extends Omit<FontAwesomeIconProps, 'icon'> {
 }
 
 export const DeleteIcon = (props: Props) => {
-  return <FontAwesomeIcon icon={faTrash} {...props} />;
+  return <FontAwesomeIcon icon={faTrashCan} {...props} />;
 };
