@@ -2,18 +2,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Tab, Tabs } from '../Tabs';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { Stack } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { userLanguages, userDefaultLanguage } from '../../Translation/languages';
 import { error } from '@/source/styles/colors';
+import { sm } from '@/source/styles/layouts';
+import TabContent from '../TabContent';
 
 export default function UserLanguages({
   languagesWithError: errors = [],
   onChange
 }: {
   languagesWithError?: string[];
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (language: string) => void;
 }) {
   const [language, setLanguage] = useState(userDefaultLanguage);
+
+  useEffect(() => {
+    onChange && onChange(language);
+  }, []);
 
   return (
     <Tabs
@@ -28,12 +34,7 @@ export default function UserLanguages({
       {userLanguages.map((language) => (
         <Tab
           key={language}
-          label={
-            <Stack direction='row' columnGap={4} alignItems='center'>
-              {language}{' '}
-              {errors.includes(language) && <FontAwesomeIcon icon={faExclamationCircle} color={error.main} />}
-            </Stack>
-          }
+          label={<TabContent name={language} error={errors.includes(language)} />}
           value={language}
         />
       ))}

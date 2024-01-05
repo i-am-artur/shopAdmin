@@ -26,6 +26,13 @@ export const unit = {
   }
 };
 
+export const sm = {
+  gap: {
+    h: 4,
+    v: 4
+  }
+};
+
 export const form = {
   gap: {
     h: 6,

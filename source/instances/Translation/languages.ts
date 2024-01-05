@@ -5,7 +5,7 @@ export const languages = [
 export const defaultLanguage = 'en';
 
 export const userLanguages = ['en', 'ru'];
-export const userDefaultLanguage = 'en';
+export const userDefaultLanguage = 'ru';
 
 export function getLanguageFrom(pathName: string) {
   // TODO: optimize with split

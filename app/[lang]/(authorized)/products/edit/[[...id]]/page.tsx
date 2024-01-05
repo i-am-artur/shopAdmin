@@ -1,6 +1,6 @@
 'use client';
 import { Button, FormControlLabel, Stack } from '@mui/material';
-import { box, unit } from '@/source/styles/layouts';
+import { box, sm, unit } from '@/source/styles/layouts';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { error } from '@/source/styles/colors';
@@ -17,6 +17,7 @@ import Checkbox from '@/source/instances/Form/Checkbox/Checkbox';
 import { Tab, Tabs } from '@/source/instances/Tabs/Tabs';
 import Options from '@/app/[lang]/(authorized)/products/edit/[[...id]]/components/Options/Options';
 import UserLanguages from '@/source/instances/Tabs/UserLanguages/UserLanguages';
+import TabContent from '@/source/instances/Tabs/TabContent';
 
 export default function ProductEditPage() {
   const [language, setLanguage] = useState('en');
@@ -37,17 +38,10 @@ export default function ProductEditPage() {
         label='Product is visible'
       />
 
-      <UserLanguages languagesWithError={['en']} />
+      <UserLanguages languagesWithError={['en']} onChange={setLanguage} />
 
       <Tabs value={section} onChange={(event, value) => setSection(value)} aria-label='sections'>
-        <Tab
-          label={
-            <Stack direction='row' columnGap={4} alignItems='center'>
-              General <FontAwesomeIcon icon={faExclamationCircle} color={error.main} />
-            </Stack>
-          }
-          value='General'
-        />
+        <Tab label={<TabContent name='General' />} value='General' />
         <Tab label='Price/Properties' value='Price/Properties' />
         <Tab label='Images' value='Images' />
         <Tab label='Quantity/Variants' value='Quantity' />
