@@ -30,12 +30,13 @@ export default function EditBrandPage() {
       </Stack>
 
       <UserLanguages />
-      <Divider />
+      {/* <Divider /> */}
 
-      <FormControlLabel
+      {/* <FormControlLabel
         control={<Checkbox aria-label='Active for this language' />}
         label='Active for this language'
-      />
+      /> */}
+
       <TextField
         placeholder='E.g. Phone or Laptop'
         label='Attribute group name'
@@ -44,11 +45,7 @@ export default function EditBrandPage() {
         defaultValue='Phone'
       />
 
-      <Divider />
-
-      <Button variant='contained' color='secondary' startIcon={<FontAwesomeIcon icon={faPlusCircle} />}>
-        Add attribute
-      </Button>
+      {/* <Divider /> */}
 
       <Attributes />
     </Stack>
