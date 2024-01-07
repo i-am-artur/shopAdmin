@@ -16,7 +16,7 @@ export default function AttributesPage() {
     <Stack rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>
         <PageHeading>Attributes group</PageHeading>
-        <Add component={Link} href={route.brands.edit.path} />
+        <Add component={Link} href={route.attributeGroups.edit.path} />
       </Stack>
 
       <Stack direction='row' justifyContent='space-between' columnGap={unit.gap.h}>
@@ -32,7 +32,13 @@ export default function AttributesPage() {
           <InputLabel id='demo-simple-select-label' size='small'>
             Action
           </InputLabel>
-          <Select labelId='demo-simple-select-label' id='demo-simple-select' value={''} label='Action'>
+          <Select
+            label='Action'
+            value={''}
+            placeholder='Action'
+            labelId='demo-simple-select-label'
+            onChange={(e) => alert(e.target.value)}
+          >
             <MenuItem value={10}>Delete</MenuItem>
             <MenuItem value={20}>Set parent category</MenuItem>
           </Select>

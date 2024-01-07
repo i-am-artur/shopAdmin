@@ -5,12 +5,14 @@ import { radius } from '../../styles/borders';
 
 const cellPadding = 8;
 
-export const Table = styled.table`
+export const Table = styled.table<{ $sx?: CSSProp }>`
   font-size: 14px;
   border-collapse: collapse;
   border-radius: ${radius.general}px;
   border-style: hidden;
   box-shadow: 0 0 0 1px ${table.main};
+
+  ${({ $sx }) => $sx ?? {}};
 `;
 
 export const THead = styled.thead``;

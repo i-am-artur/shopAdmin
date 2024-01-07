@@ -21,7 +21,7 @@ export const navItems: NavItem[] = [
       { name: 'Categories', link: routeCategories.index.path },
       { name: 'Products', link: routeProducts.index.path },
       { name: 'Brands', link: routeBrands.index.path },
-      { name: 'Attributes groups', link: routeAttributeGroups.index.path }
+      { name: 'Attribute groups', link: routeAttributeGroups.index.path }
     ]
   }
 ];

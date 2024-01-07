@@ -16,7 +16,7 @@ export default function AttributeGroups() {
             <TH>
               <Checkbox aria-label='select all brands' />
             </TH>
-            <TH $sx={{ width: '100%' }}>Name</TH>
+            <TH $sx={{ width: '100%' }}>Attribute group</TH>
             <TH>Delete</TH>
           </TR>
         </THead>
@@ -26,7 +26,7 @@ export default function AttributeGroups() {
               <Checkbox aria-label='checkbox category' />
             </TD>
             <TD>
-              <Link href={route.brands.edit.path}>name</Link>
+              <Link href={route.attributeGroups.edit.path}>name</Link>
             </TD>
             <TD $sx={{ textAlign: 'center' }}>
               <IconButton>
