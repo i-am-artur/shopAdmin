@@ -1,5 +1,6 @@
 'use client';
 import { NavItem, navItems } from '@/source/instances/Navigation/data';
+import { unit } from '@/source/styles/layouts';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Box, Collapse, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
@@ -14,6 +15,7 @@ export default function Navigation({ onSelect }: { onSelect?: () => void }) {
 
     return navItems.map((el, i) => {
       const hasSubItems = 'subItems' in el;
+
       return (
         <List key={i} disablePadding>
           <ListItem disablePadding>
@@ -28,7 +30,7 @@ export default function Navigation({ onSelect }: { onSelect?: () => void }) {
               }}
             >
               <ListItemText sx={{ margin: 0 }}>
-                <Box pl={level * 10}>{el.name.toUpperCase()}</Box>
+                <Box pl={level * unit.gap.h}>{el.name.toUpperCase()}</Box>
               </ListItemText>
               {hasSubItems && <FontAwesomeIcon icon={expanded.includes(i) ? faChevronUp : faChevronDown} />}
             </ListItemButton>

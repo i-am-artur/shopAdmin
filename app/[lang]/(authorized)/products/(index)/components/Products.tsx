@@ -13,7 +13,7 @@ export default function Products() {
         <THead>
           <TR>
             <TH>
-              <Checkbox aria-label='select all products' />
+              <Checkbox aria-label='select all products' variant='regular' />
             </TH>
             <TH $sx={{ width: '100%' }}>Name</TH>
             <TH>Min. quantity</TH>
@@ -22,7 +22,7 @@ export default function Products() {
         <TBody>
           <TR>
             <TD>
-              <Checkbox aria-label='select product' />
+              <Checkbox aria-label='select product' variant='regular' />
             </TD>
             <TD>
               <Link href={route.products.edit.path}>name</Link>

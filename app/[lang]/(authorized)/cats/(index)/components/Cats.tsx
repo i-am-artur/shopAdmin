@@ -17,7 +17,7 @@ export default function Cats() {
         <THead>
           <TR>
             <TH>
-              <Checkbox aria-label='select all categories' />
+              <Checkbox aria-label='select all categories' variant='regular' />
             </TH>
             <TH $sx={{ width: '100%' }}>Name</TH>
             <TH>Delete</TH>
@@ -26,7 +26,7 @@ export default function Cats() {
         <TBody>
           <TR>
             <TD>
-              <Checkbox aria-label='checkbox category' />
+              <Checkbox aria-label='checkbox category' variant='regular' />
             </TD>
             <TD>
               <Link href={route.categories.edit.path}>name</Link>

@@ -7,7 +7,7 @@ import { route } from '@/source/routes/routes';
 import { IconButton, Link } from '@mui/material';
 import { Fragment } from 'react';
 
-export default function Brands() {
+export default function OptionGroups() {
   return (
     <Fragment>
       <Table>
@@ -16,7 +16,8 @@ export default function Brands() {
             <TH>
               <Checkbox aria-label='select all brands' variant='regular' />
             </TH>
-            <TH $sx={{ width: '100%' }}>Name</TH>
+            <TH $sx={{ width: '100%' }}>Option group</TH>
+            <TH>Type</TH>
             <TH>Delete</TH>
           </TR>
         </THead>
@@ -26,8 +27,9 @@ export default function Brands() {
               <Checkbox aria-label='checkbox category' variant='regular' />
             </TD>
             <TD>
-              <Link href={route.brands.edit.path}>name</Link>
+              <Link href={route.attributeGroups.edit.path}>name</Link>
             </TD>
+            <TD>Feature</TD>
             <TD $sx={{ textAlign: 'center' }}>
               <IconButton>
                 <DeleteIcon />
