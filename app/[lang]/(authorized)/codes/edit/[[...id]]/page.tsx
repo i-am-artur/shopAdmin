@@ -8,46 +8,39 @@ import { Tab, Tabs } from '@/source/instances/Tabs/Tabs';
 import dynamic from 'next/dynamic';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { error } from '@/source/styles/colors';
-import { faExclamationCircle, faImage, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationCircle, faImage } from '@fortawesome/free-solid-svg-icons';
 import UserLanguages from '@/source/instances/Tabs/UserLanguages/UserLanguages';
 import Checkbox from '@/source/instances/Form/Checkbox/Checkbox';
 import Image from 'next/image';
 import { DeleteIcon } from '@/source/instances/Icons/DeleteIcon';
 import MinButton from '@/source/instances/Buttons/MinButton';
-import Attributes from './components/Attributes';
 
-export default function EditBrandPage() {
+export default function EditCodePage() {
   const [language, setLanguage] = useState('en');
 
   return (
     <Stack component='main' rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>
-        <PageHeading>Attributes group name</PageHeading>
+        <PageHeading>Code</PageHeading>
         <Stack direction='row' columnGap={unit.gap.h}>
           <Button variant='contained'>Save</Button>
           <CancelBack />
         </Stack>
       </Stack>
 
-      <UserLanguages />
-      {/* <Divider /> */}
-
-      {/* <FormControlLabel
-        control={<Checkbox aria-label='Active for this language' />}
-        label='Active for this language'
-      /> */}
-
       <TextField
-        placeholder='E.g. Phone or Laptop'
-        label='Attribute group name'
+        placeholder='Enter code name in English'
+        label='Eng'
         fullWidth
-        required
-        defaultValue='Phone'
+        InputLabelProps={{ shrink: true }}
       />
 
-      {/* <Divider /> */}
-
-      <Attributes />
+      <TextField
+        placeholder='Enter code name in Russian'
+        label='Rus'
+        fullWidth
+        InputLabelProps={{ shrink: true }}
+      />
     </Stack>
   );
 }

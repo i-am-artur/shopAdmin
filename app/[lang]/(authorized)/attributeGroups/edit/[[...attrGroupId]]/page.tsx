@@ -16,7 +16,7 @@ import { DeleteIcon } from '@/source/instances/Icons/DeleteIcon';
 import MinButton from '@/source/instances/Buttons/MinButton';
 import Attributes from './components/Attributes';
 
-export default function EditBrandPage() {
+export default function EditAttributeGroupPage() {
   const [language, setLanguage] = useState('en');
 
   return (
