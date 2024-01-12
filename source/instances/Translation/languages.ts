@@ -1,6 +1,6 @@
 export const languages = [
   { id: 'en', iso3: 'Eng', name: 'English' },
-  { id: 'ru', iso3: 'Rus', name: 'Русский' }
+  { id: 'ru', iso3: 'Rus', name: 'Русский' },
 ];
 export const defaultLanguage = 'en';
 

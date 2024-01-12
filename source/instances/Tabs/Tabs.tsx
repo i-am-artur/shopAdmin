@@ -10,7 +10,7 @@ export const Tabs = styled(MUITabs)<{
   padding: 4px;
   min-height: initial !important;
   width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'fit-content')};
-  background-color: ${secondary.bg};
+  background-color: ${secondary.main};
   border-radius: ${radius.general}px;
 
   & .MuiTabs-flexContainer {

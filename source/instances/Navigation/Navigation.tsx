@@ -1,6 +1,6 @@
 'use client';
 import { NavItem, navItems } from '@/source/instances/Navigation/data';
-import { unit } from '@/source/styles/layouts';
+import { box, unit } from '@/source/styles/layouts';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Box, Collapse, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
@@ -24,10 +24,11 @@ export default function Navigation({ onSelect }: { onSelect?: () => void }) {
               onClick={() => {
                 if (hasSubItems)
                   return setExpanded((pre) =>
-                    pre.includes(i) ? pre.filter((item) => item !== i) : [...pre, i]
+                    pre.includes(i) ? pre.filter((item) => item !== i) : [...pre, i],
                   );
                 return onSelect && onSelect();
               }}
+              sx={{ py: 3 }}
             >
               <ListItemText sx={{ margin: 0 }}>
                 <Box pl={level * unit.gap.h}>{el.name.toUpperCase()}</Box>
@@ -46,7 +47,8 @@ export default function Navigation({ onSelect }: { onSelect?: () => void }) {
     <Box
       component='nav'
       sx={{
-        minWidth: 180
+        mt: unit.gap.v,
+        minWidth: 180,
       }}
     >
       {parseNavigation(navItems)}

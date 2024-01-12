@@ -1,8 +1,10 @@
 import { routeAttributeGroups } from '@/app/[lang]/(authorized)/attributeGroups/src/routes';
 import { routeBrands } from '@/app/[lang]/(authorized)/brands/src/routes';
 import { routeCategories } from '@/app/[lang]/(authorized)/cats/src/routes';
+import { routeCodes } from '@/app/[lang]/(authorized)/codes/src/routes';
 import { routeOptionGroups } from '@/app/[lang]/(authorized)/optionGroups/src/routes';
 import { routeProducts } from '@/app/[lang]/(authorized)/products/src/routes';
+import { routeReviews } from '@/app/[lang]/(authorized)/reviews/src/routes';
 import { routeAuth } from '@/app/[lang]/auth/src/routes';
 
 export const route = {
@@ -11,7 +13,9 @@ export const route = {
   categories: routeCategories,
   products: routeProducts,
   attributeGroups: routeAttributeGroups,
-  optionGroups: routeOptionGroups
+  optionGroups: routeOptionGroups,
+  codes: routeCodes,
+  reviews: routeReviews,
 };
 
 export function flattenUrls() {

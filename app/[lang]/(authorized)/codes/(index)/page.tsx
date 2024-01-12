@@ -14,7 +14,7 @@ export default function CodesPage() {
     <Stack rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>
         <PageHeading>Codes</PageHeading>
-        <Add component={Link} href={route.brands.edit.path} />
+        <Add component={Link} href={route.codes.edit.path} />
       </Stack>
 
       <Table>

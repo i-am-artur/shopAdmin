@@ -16,8 +16,6 @@ import { DeleteIcon } from '@/source/instances/Icons/DeleteIcon';
 import MinButton from '@/source/instances/Buttons/MinButton';
 
 export default function EditCodePage() {
-  const [language, setLanguage] = useState('en');
-
   return (
     <Stack component='main' rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>

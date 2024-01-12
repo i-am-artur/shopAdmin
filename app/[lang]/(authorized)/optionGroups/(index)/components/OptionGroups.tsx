@@ -16,7 +16,7 @@ export default function OptionGroups() {
             <TH>
               <Checkbox aria-label='select all brands' variant='regular' />
             </TH>
-            <TH $sx={{ width: '100%' }}>Option group</TH>
+            <TH $sx={{ width: '100%' }}>Item</TH>
             <TH>Type</TH>
             <TH>Delete</TH>
           </TR>

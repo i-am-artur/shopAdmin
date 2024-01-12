@@ -15,7 +15,7 @@ export default function OptionGroupsPage() {
   return (
     <Stack rowGap={box.gap.v}>
       <Stack direction='row' justifyContent='space-between' alignItems='center'>
-        <PageHeading>Option groups</PageHeading>
+        <PageHeading>Option templates</PageHeading>
       </Stack>
 
       <Stack direction='row' columnGap={unit.gap.h}>
