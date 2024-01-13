@@ -1,20 +1,9 @@
 'use client';
-import Checkbox from '@/source/instances/Form/Checkbox/Checkbox';
 import { DeleteIcon } from '@/source/instances/Icons/DeleteIcon';
-import Pagination from '@/source/instances/Pagination/Pagination';
 import { TBody, TD, TH, THead, TR, Table } from '@/source/instances/Table/Table';
-import { SectionHeading } from '@/source/instances/Typography/Headings';
-import { route } from '@/source/routes/routes';
-import {
-  faArrowDownShortWide,
-  faGripHorizontal,
-  faSortAlphaDesc,
-  faSortNumericDesc,
-  faPlusCircle
-} from '@fortawesome/free-solid-svg-icons';
+import { faGripHorizontal, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconButton, Link, Stack, TextField, Button, Divider } from '@mui/material';
-import { Fragment } from 'react';
+import { Button, IconButton, Stack, TextField } from '@mui/material';
 
 export default function Attributes() {
   return (

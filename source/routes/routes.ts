@@ -4,8 +4,9 @@ import { routeCategories } from '@/app/[lang]/(authorized)/cats/src/routes';
 import { routeCodes } from '@/app/[lang]/(authorized)/codes/src/routes';
 import { routeOptionGroups } from '@/app/[lang]/(authorized)/optionGroups/src/routes';
 import { routeProducts } from '@/app/[lang]/(authorized)/products/src/routes';
-import { routeReviews } from '@/app/[lang]/(authorized)/reviews/src/routes';
+import { routeReviews } from '@/source/routes/paths/reviews';
 import { routeAuth } from '@/app/[lang]/auth/src/routes';
+import { routePages } from './paths/pages';
 
 export const route = {
   auth: routeAuth,
@@ -16,6 +17,7 @@ export const route = {
   optionGroups: routeOptionGroups,
   codes: routeCodes,
   reviews: routeReviews,
+  pages: routePages,
 };
 
 export function flattenUrls() {

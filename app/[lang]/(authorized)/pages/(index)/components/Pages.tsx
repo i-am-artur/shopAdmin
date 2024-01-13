@@ -1,22 +1,16 @@
 'use client';
-import Add from '@/source/instances/Buttons/Add/Add';
 import Checkbox from '@/source/instances/Form/Checkbox/Checkbox';
 import { DeleteIcon } from '@/source/instances/Icons/DeleteIcon';
-import { TH, THead, TR, Table, TD, TBody } from '@/source/instances/Table/Table';
-import { PageHeading } from '@/source/instances/Typography/Headings';
+import { GripIcon } from '@/source/instances/Icons/GripIcon';
+import Pagination from '@/source/instances/Pagination/Pagination';
+import { TBody, TD, TH, THead, TR, Table } from '@/source/instances/Table/Table';
 import { route } from '@/source/routes/routes';
-import { box } from '@/source/styles/layouts';
-import { IconButton, Stack } from '@mui/material';
-import Link from 'next/link';
+import { IconButton, Link } from '@mui/material';
+import { Fragment } from 'react';
 
-export default function CodesPage() {
+export default function Pages() {
   return (
-    <Stack rowGap={box.gap.v}>
-      <Stack direction='row' justifyContent='space-between' alignItems='center'>
-        <PageHeading>Codes</PageHeading>
-        <Add component={Link} href={route.codes.edit.path} />
-      </Stack>
-
+    <Fragment>
       <Table>
         <THead>
           <TR>
@@ -24,6 +18,7 @@ export default function CodesPage() {
               <Checkbox aria-label='select all brands' variant='regular' />
             </TH>
             <TH $sx={{ width: '100%' }}>Name</TH>
+            <TH>Order</TH>
             <TH>Delete</TH>
           </TR>
         </THead>
@@ -33,7 +28,12 @@ export default function CodesPage() {
               <Checkbox aria-label='checkbox category' variant='regular' />
             </TD>
             <TD>
-              <Link href={route.codes.edit.path}>name</Link>
+              <Link href={`${route.pages.edit.path}/id`}>name</Link>
+            </TD>
+            <TD $sx={{ textAlign: 'center' }}>
+              <IconButton>
+                <GripIcon />
+              </IconButton>
             </TD>
             <TD $sx={{ textAlign: 'center' }}>
               <IconButton>
@@ -43,6 +43,8 @@ export default function CodesPage() {
           </TR>
         </TBody>
       </Table>
-    </Stack>
+
+      <Pagination />
+    </Fragment>
   );
 }

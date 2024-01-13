@@ -32,7 +32,7 @@ export default function Reviews() {
             </TD>
             <TD>20.12.23</TD>
             <TD $sx={{ textAlign: 'center' }}>
-              <IconButton>
+              <IconButton onClick={() => alert('fds')}>
                 <DeleteIcon />
               </IconButton>
             </TD>
