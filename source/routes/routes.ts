@@ -4,9 +4,9 @@ import { routeCategories } from '@/app/[lang]/(authorized)/cats/src/routes';
 import { routeCodes } from '@/app/[lang]/(authorized)/codes/src/routes';
 import { routeOptionGroups } from '@/app/[lang]/(authorized)/optionGroups/src/routes';
 import { routeProducts } from '@/app/[lang]/(authorized)/products/src/routes';
-import { routeReviews } from '@/source/routes/paths/reviews';
+import { routeReviews } from '@/app/[lang]/(authorized)/reviews/src/routes';
 import { routeAuth } from '@/app/[lang]/auth/src/routes';
-import { routePages } from './paths/pages';
+import { routePages } from '@/app/[lang]/(authorized)/pages/src/routes';
 
 export const route = {
   auth: routeAuth,
